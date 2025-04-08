@@ -1,0 +1,7 @@
+// ────Hide specific Fields─────────────────────────────────────────────────── /
+.internal-embed[alt~="no-source"] .markdown-embed,
+.internal-embed[alt~="no-source"].markdown-embed {
+	.inline-field:has([data-dv-norm-key*="source"]) {
+		display: none !important;
+	}
+}

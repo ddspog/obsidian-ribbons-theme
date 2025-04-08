@@ -1,0 +1,45 @@
+.callout[data-callout="i/attribute"] {
+	background: none;
+	--callout-color: var(--text-normal);
+	display: block;
+	position: relative;
+	overflow: visible;
+
+	height: calc(1.5em * var(--line-height-normal));
+	margin-bottom: calc(1em * var(--line-height-normal)) !important;
+	--el-margin-bottom: calc(1em * var(--line-height-normal)) !important;
+
+	padding: 8px 18px;
+
+	border-image-source: var(--field-img);
+	border-image-slice: 18;
+	border-image-width: 36px;
+	border-image-outset: 8px;
+
+	.callout-title {
+		.callout-icon {
+			display: none;
+		}
+
+		position: relative;
+		top: calc(1.4em * var(--line-height-normal));
+		text-transform: uppercase;
+		font-size: var(--font-smallest);
+	}
+
+	.callout-content {
+		position: relative;
+		top: calc(-0.7em * var(--line-height-normal));
+		font-stretch: condensed;
+
+		p:first-child {
+			margin-top: 0px;
+			--el-margin-top: 0px;
+		}
+
+		p:last-child {
+			margin-bottom: 0px;
+			--el-margin-bottom: 0px;
+		}
+	}
+}

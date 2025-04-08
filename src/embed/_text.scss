@@ -1,0 +1,24 @@
+// ────Set text properties─────────────────────────────────────────────------─ /
+.internal-embed:is([alt*="bt"], [alt*="black-text"]) p {
+	color: black;
+}
+
+.internal-embed:is([alt*="olk"], [alt*="outline-link"]) a:has(.iconize-icon-in-link) {
+	text-shadow: 0px 0px var(--size-4-2) var(--text-title);
+}
+
+.internal-embed:is([alt*="hide-last-line"], [alt*="hide-ll"]) > .markdown-embed-content > .markdown-preview-view > .markdown-preview-section {
+	min-height: unset !important;
+
+	& > .el-p:last-child {
+		display: none;
+	}
+
+	& .el-pre > .block-language-dataviewjs > p:last-child {
+		display: none;
+	}
+}
+
+.internal-embed > .markdown-embed-content > .markdown-preview-view {
+	min-height: unset !important;
+}

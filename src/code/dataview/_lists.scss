@@ -1,0 +1,21 @@
+.simple-dataview-lists {
+	.block-language-dataview {
+		.list-view-ul {
+			margin-block-start: 0px;
+			margin-block-end: 0px;
+
+			li {
+				margin-inline-start: 0;
+			}
+		}
+
+		.dataview-error-box {
+			display: none;
+		}
+	}
+}
+
+.is-live-preview .block-language-dataview > p,
+.is-live-preview .block-language-dataview > span {
+	line-height: unset;
+}

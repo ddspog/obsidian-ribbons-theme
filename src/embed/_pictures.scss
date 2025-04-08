@@ -1,0 +1,7 @@
+// ────Hide Pictures────────────────────────────────────────────────────────── /
+.internal-embed:is([alt~="no-p"], [alt~="no-picture"]) .markdown-embed,
+.internal-embed:is([alt~="no-p"], [alt~="no-picture"]).markdown-embed {
+	.image-embed {
+		display: none !important;
+	}
+}

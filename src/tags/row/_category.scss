@@ -1,0 +1,14 @@
+tbody:has(a[href="#css/row/category"]) td {
+    text-indent: var(--size-4-2);
+
+    &:has(a[href="#css/row/category"]) {
+        text-indent: inherit;
+        font-weight: 600;
+        font-style: italic;
+        background-color: var(--background-secondary);
+
+        a[href="#css/row/category"] {
+            display: none;
+        }
+    }
+}

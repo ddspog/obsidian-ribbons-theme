@@ -1,0 +1,13 @@
+body {
+	--h1-font: "T Avenir Next";
+	--h1-color: var(--text-title);
+	--h1-variant: small-caps;
+	--hi-weight: 600;
+}
+
+.markdown-source-view .HyperMD-header.HyperMD-header-1,
+.markdown-rendered.markdown-preview-view h1 {
+	text-align: left;
+	text-decoration: solid underline var(--text-title) var(--size-2-1);
+	text-underline-offset: var(--size-4-2);
+}

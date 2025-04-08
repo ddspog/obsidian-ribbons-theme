@@ -1,0 +1,31 @@
+.note-statblock,
+.embed-note-statblock .block-language-dataviewjs {
+	--h6-font: "T Avenir Next";
+	--h6-weight: normal;
+
+	.HyperMD-header.HyperMD-header-6,
+	h6 {
+		text-transform: uppercase;
+		background-color: var(--text-faint);
+		color: var(--background-primary);
+		border-top-right-radius: var(--size-4-4);
+		border-bottom-right-radius: var(--size-4-4);
+		padding-left: var(--size-4-2);
+		padding-bottom: var(--size-2-1);
+		padding-top: var(--size-2-1);
+		margin-bottom: var(--size-4-2) !important;
+		--el-margin-bottom: var(--size-4-2) !important;
+		text-align: left !important;
+		left: 0px !important;
+
+		.cm-formatting-header-1 {
+			float: left;
+			color: var(--background-secondary);
+		}
+
+		.cm-header-1 {
+			float: left;
+			text-align: left;
+		}
+	}
+}

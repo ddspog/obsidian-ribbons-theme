@@ -1,0 +1,110 @@
+/*----Image Positions/Adjustments----*/
+body {
+    --micro: 70px;
+    --tiny: 100px;
+    --small: 200px;
+    --small-med: 300px;
+    --med-small: 400px;
+    --medium: 500px;
+    --med-tall: 600px;
+    --tall: 700px;
+}
+.popover.hover-popover {
+    --micro: 70px;
+    --tiny: 100px;
+    --small: 150px;
+    --small-med: 200px;
+    --med-small: 250px;
+    --medium: 300px;
+    --med-tall: 450px;
+    --tall: 500px;
+}
+/*----Mobile----*/
+@media (max-width: 500px) {
+    
+    .theme-dark, .theme-light {
+        /*Mobile Sizes*/
+        --radius: 0px;
+        --micro: 70px;
+        --tiny: 100px;
+        --small: 150px;
+        --small-med: 200px;
+        --med-small: 250px;
+        --medium: 300px;
+        --med-tall: 450px;
+        --tall: 500px;
+    }
+}
+
+
+/*-Image Sizing-*/
+
+/*Fit image within bounds WITHOUT stretching*/
+img:is([alt*="cover"], [alt*="cvr"]) {
+    object-fit: cover;
+}
+
+//Sizing; Height Width
+img[alt][alt]:not([alt*=relative]) {
+    &[alt*="hmicro"]    { height: var(--micro); }
+    &[alt*="htiny"]     { height: var(--tiny); }
+    &[alt*="hsmall"]    { height: var(--small); }
+    &[alt*="hs-med"]    { height: var(--small-med); }
+    &[alt*="hm-sm"]     { height: var(--med-small); }
+    &[alt*="hmed"]      { height: var(--medium); }
+    &[alt*="hm-tl"]     { height: var(--med-tall); }
+    &[alt*="htall"]     { height: var(--tall); }
+    &[alt*="hfull"]     { height: 100%; }
+
+    &[alt*="wmicro"]    { width: var(--micro); }
+    &[alt*="wtiny"]     { width: var(--tiny); }
+    &[alt*="wsmall"]    { width: var(--small); }
+    &[alt*="ws-med"]    { width: var(--small-med); }
+    &[alt*="wm-sm"]     { width: var(--med-small); }
+    &[alt*="wmed"]      { width: var(--medium); }
+    &[alt*="wm-tl"]     { width: var(--med-tall); }
+    &[alt*="wtall"]     { width: var(--tall); }
+    &[alt*="wfull"]     { width: 100%; }
+}
+
+//Relative Sizing
+.image-embed[alt][alt*="relative"],
+div:not(.image-embed) > img[alt][alt*="relative"] 
+{
+    --micro: 10%;
+    --tiny: 20%;
+    --small: 30%;
+    --small-med: 40%;
+    --med-small: 50%;
+    --medium: 60%;
+    --med-tall: 70%;
+    --tall: 85%;
+
+    &[alt*="wmicro"]    { width: var(--micro); }
+    &[alt*="wtiny"]     { width: var(--tiny); }
+    &[alt*="wsmall"]    { width: var(--small); }
+    &[alt*="ws-med"]    { width: var(--small-med); }
+    &[alt*="wm-sm"]     { width: var(--med-small); }
+    &[alt*="wmed"]      { width: var(--medium); }
+    &[alt*="wm-tl"]     { width: var(--med-tall); }
+    &[alt*="wtall"]     { width: var(--tall); }
+
+    
+    &[alt*="hmicro"]    { width: var(--micro); }
+    &[alt*="htiny"]     { width: var(--tiny); }
+    &[alt*="hsmall"]    { width: var(--small); }
+    &[alt*="hs-med"]    { width: var(--small-med); }
+    &[alt*="hm-sm"]     { width: var(--med-small); }
+    &[alt*="hmed"]      { width: var(--medium); }
+    &[alt*="hm-tl"]     { width: var(--med-tall); }
+    &[alt*="htall"]     { width: var(--tall); }
+
+    &[alt*="hfull"]     { width: 100%; }
+}
+.image-embed[alt][alt*="relative"],
+div:not(.image-embed) > img[alt][alt*="relative"] {
+    display: block;
+    margin: auto;
+    max-height: 100%;
+    object-fit: cover;
+}

@@ -1,0 +1,179 @@
+@media (min-width: 820px) {
+	.callout:is(
+		[data-callout-metadata~="ml-42"]
+	) {
+		> .callout-content {
+			min-height: 42em;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	.callout:is(
+		[data-callout-metadata~="ml-44"]
+	) {
+		> .callout-content {
+			min-height: 44em;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	.callout:is(
+		[data-callout-metadata~="ml-46"]
+	) {
+		> .callout-content {
+			min-height: 46em;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	.callout:is(
+		[data-callout-metadata~="ml-48"]
+	) {
+		> .callout-content {
+			min-height: 48em;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	.callout:is(
+		[data-callout-metadata~="ml-50"]
+	) {
+		> .callout-content {
+			min-height: 50em;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	.callout:is(
+		[data-callout-metadata~="ml-52"]
+	) {
+		> .callout-content {
+			min-height: 52em;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}
+
+.callout:is(
+	[data-callout-metadata~="w-30-50"]
+) {
+	width: 50%;
+	[data-callout-metadata~="w-min"] {
+		width: 60%;
+	}
+	[data-callout-metadata~="w-max"] {
+		width: 100%;
+	}
+}
+
+@media (min-width: 820px) {
+	.callout:is(
+		[data-callout-metadata~="iw-16"]
+	) {
+		width: 16%;
+	}
+	
+	.callout:is(
+		[data-callout-metadata~="iw-24"]
+	) {
+		width: 24%;
+	}
+	
+	.callout:is(
+		[data-callout-metadata~="iw-30"]
+	) {
+		width: 30%;
+	}
+	
+	.callout:is(
+		[data-callout-metadata~="iw-36"]
+	) {
+		width: 36%;
+	}
+	
+	.callout:is(
+		[data-callout-metadata~="iw-40"]
+	) {
+		width: 40%;
+	}
+	
+	.callout:is(
+		[data-callout-metadata~="iw-50"]
+	) {
+		width: 50%;
+	}
+	
+	.callout:is(
+		[data-callout-metadata~="iw-60"]
+	) {
+		width: 60%;
+	}
+	
+	.callout:is(
+		[data-callout-metadata~="iw-64"]
+	) {
+		width: 64%;
+	}
+
+	.callout:is(
+		[data-callout-metadata*="iw-"]
+	) > .callout-content {
+		width: 100%;
+	}
+}
+
+@media (max-width: 820px) {
+	.callout:is(
+		[data-callout-metadata*="iw-"]
+	) {
+		width: 100%;
+
+		> .callout-content {
+			width: 100%;
+		}
+	}
+}
+
+.callout:is(
+	[data-callout-metadata~="w-16"]
+) {
+	width: 16%;
+}
+
+.callout:is(
+	[data-callout-metadata~="w-36"]
+) {
+	width: 36%;
+}
+
+.callout:is(
+	[data-callout-metadata~="w-40"]
+) {
+	width: 40%;
+}
+
+.callout:is(
+	[data-callout-metadata~="w-50"]
+) {
+	width: 50%;
+}
+
+.callout:is(
+	[data-callout-metadata~="w-60"]
+) {
+	width: 60%;
+}
+
+.callout:is(
+	[data-callout-metadata~="w-64"]
+) {
+	width: 64%;
+}
+
+

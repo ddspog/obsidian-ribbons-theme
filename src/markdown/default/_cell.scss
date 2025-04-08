@@ -1,0 +1,8 @@
+.markdown-rendered :is(tbody > tr > td, thead tr > th) {
+	white-space: unset;
+
+	ul {
+		margin-block-start: 0.25rem;
+		margin-block-end: 0px;
+	}
+}

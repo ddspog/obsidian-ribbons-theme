@@ -1,0 +1,8 @@
+td:has(a[href="#css/cell/conclusion"]) {
+	color: var(--background-primary);
+	background-color: var(--background-mythic) !important;
+
+	a[href="#css/cell/conclusion"] {
+		display: none !important;
+	}
+}

@@ -1,0 +1,37 @@
+.callout:is(
+	[data-callout-metadata~="left"]
+) {
+	float: left;
+}
+
+.callout:is(
+	[data-callout-metadata~="right"]
+) {
+	float: right;
+}
+
+.callout:is(
+	[data-callout-metadata~="center"]
+) {
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.callout:is(
+	[data-callout-metadata~="f-left"]
+) {
+	margin-left: auto !important;
+}
+
+.callout:is(
+	[data-callout-metadata~="f-right"]
+) {
+	margin-right: auto !important;
+}
+
+.callout.callout:is(
+	[data-callout-metadata~="row"]
+) {
+	display: flex;
+	flex-direction: column;
+}

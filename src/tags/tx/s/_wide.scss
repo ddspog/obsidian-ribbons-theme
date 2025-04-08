@@ -1,0 +1,19 @@
+.block-language-tx:has(a[href="#css/tx/s/wide"]) {
+    overflow: auto;
+
+    .cm-table-widget.markdown-rendered .table-wrapper {
+        min-width: 100%;
+    } //min-width to fix overflow colum button issue
+
+    table:has(a[href="#css/tx/s/wide"]) {
+        overflow-x: scroll;
+
+        th, td {
+            white-space: nowrap;
+        }
+
+        a[href="#css/tx/s/wide"] {
+            display: none;
+        }
+    }
+}

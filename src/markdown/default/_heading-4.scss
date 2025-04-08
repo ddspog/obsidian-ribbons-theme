@@ -1,0 +1,10 @@
+body { 
+	--h4-style: italic;
+	--h4-color: var(--text-subtitle);
+}
+
+.markdown-source-view .HyperMD-header.HyperMD-header-4,
+.markdown-rendered.markdown-preview-view h4 {
+	position: relative;
+	text-indent: var(--size-4-8);
+}

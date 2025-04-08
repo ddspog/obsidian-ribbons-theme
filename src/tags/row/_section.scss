@@ -1,0 +1,15 @@
+tbody tr:has(a[href="#css/row/section-start"]) {
+	border-top: solid var(--text-title) var(--size-2-2);
+
+    a[href="#css/row/section-start"] {
+        display: none;
+    }
+}
+
+tbody tr:has(a[href="#css/row/section-end"]) {
+	border-bottom: solid var(--text-title) var(--size-2-2);
+
+    a[href="#css/row/section-end"] {
+        display: none;
+    }
+}

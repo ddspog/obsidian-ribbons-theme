@@ -1,0 +1,13 @@
+.note-spell {
+	--inline-title-size: 1.6em;
+	--inline-title-font: "T Founders Grotesk 2019";
+	--inline-title-weight: normal;
+
+	.inline-title {
+		text-transform: uppercase;
+		background-color: var(--text-title);
+		color: var(--background-primary);
+		padding-left: var(--size-4-2);
+		padding-bottom: var(--size-2-1);
+	}
+}

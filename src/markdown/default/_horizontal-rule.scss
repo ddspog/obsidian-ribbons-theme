@@ -1,0 +1,16 @@
+.view-content hr {
+	border: none;
+	border-top: var(--size-2-1) double var(--text-normal) !important;
+	color: var(--text-normal);
+	overflow: visible;
+	text-align: center;
+	height: var(--size-2-2);
+
+	&::after {
+		background: var(--background-primary);
+		content: '§';
+		padding: 0 var(--size-2-2);
+		position: relative;
+		top: calc(0% - var(--size-4-3));
+	}
+}

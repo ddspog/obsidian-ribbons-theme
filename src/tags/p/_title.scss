@@ -1,0 +1,15 @@
+.cm-line:has(.cm-tag-cssptitle),
+p:has(a[href="#css/p/title"]) {
+    em, .cm-em {
+        color: var(--text-title) !important;
+    }
+
+    a[href="#css/p/title"] {
+        display: none;
+    }
+
+    a.tag {
+        padding: 0;
+        background-color: var(--background-primary);
+    }
+}

@@ -1,0 +1,26 @@
+@media (min-width: 820px) {
+	.callout[data-callout-metadata*="match-iy-"] {
+		position: absolute;
+		height: calc(anchor-size(height) - var(--el-margin-top, 0px) - var(--el-margin-bottom, 0px));
+		min-height: fit-content;
+	}
+}
+
+.callout[data-callout-metadata*="match-y-"] {
+	position: absolute;
+	height: calc(anchor-size(height) - var(--el-margin-top, 0px) - var(--el-margin-bottom, 0px));
+	min-height: fit-content;
+}
+
+@mixin match-y-for($fieldName) {
+	.callout[data-callout-metadata~="ref-y-#{$fieldName}"] {
+		anchor-name: --match-#{$fieldName};
+	}
+
+	.callout[data-callout-metadata~="match-y-#{$fieldName}"],
+	.callout[data-callout-metadata~="match-iy-#{$fieldName}"] {
+		position-anchor: --match-#{$fieldName};
+	}
+}
+
+@include match-y-for("skills");

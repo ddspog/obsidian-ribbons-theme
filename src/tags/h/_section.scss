@@ -1,0 +1,43 @@
+.cm-line.HyperMD-header-6:has(.cm-tag-csshsection) {
+    background-color: var(--text-faint);
+	padding-top: 0;
+	margin-top: var(--p-spacing) !important;
+	--el-margin-top: var(--p-spacing) !important;
+	text-align: left;
+	left: 0px;
+	border-top-right-radius: var(--size-4-4);
+	border-bottom-right-radius: var(--size-4-4);
+
+    .cm-header-6 {
+        font-family: "T Avenir Next";
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: condensed;
+        text-transform: unset;
+        color: var(--background-primary);
+    }
+
+	.cm-tag-csshsection {
+		display: none;
+	}
+}
+
+.el-h6:has(a[href="#css/h/section"]) {
+    background-color: var(--text-faint);
+	border-top-right-radius: var(--size-4-4);
+	border-bottom-right-radius: var(--size-4-4);
+
+    h6 {
+        font-family: "T Avenir Next";
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: condensed;
+        text-transform: unset;
+		text-align: left;
+        color: var(--background-primary);
+    }
+
+    a[href="#css/h/section"] {
+        display: none;
+    }
+}

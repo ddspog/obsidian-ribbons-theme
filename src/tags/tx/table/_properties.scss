@@ -1,0 +1,24 @@
+.block-language-tx:has(a[href="#css/tx/properties"]) table {
+	thead th, tbody td {
+		border-color: var(--background-primary);
+		font-stretch: condensed;
+	}
+
+	thead th ~ th {
+		font-weight: normal;
+	}
+
+	tbody td:first-child:has(+ td),
+	tbody td:first-child[colspan] {
+		font-weight: bold;
+		text-transform: uppercase;
+
+		a {
+			text-transform: uppercase;
+		}
+	}
+
+	a[href="#css/tx/properties"] {
+		display: none;
+	}
+}

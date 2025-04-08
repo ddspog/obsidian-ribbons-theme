@@ -1,0 +1,55 @@
+.callout[data-callout*="roll"] {
+	background-color: #dae4c1;
+}
+
+.callout[data-callout*="oracle"]{
+	background-color: #e2cae1;
+}
+
+.callout[data-callout*="roll"],
+.callout[data-callout*="oracle"] {
+	--callout-color: 0, 0, 0;
+	--callout-icon: lucide-dices;
+
+	/* Ribbon Border */
+	border-style: solid;
+	border-width: calc(var(--size-2-3) / 2) var(--size-2-1);
+	border-radius: 0;
+	border-color: var(--text-normal) var(--text-faint);
+
+	/* Spacing sticking ::after and ::before to border */
+	margin: 0 0;
+	padding: var(--size-4-3) var(--size-4-8) var(--size-2-2) var(--size-4-8);
+
+	/* Content */
+	.callout-content {
+		overflow-wrap: break-word;
+		color: black;
+	}
+}
+
+.markdown-rendered:has(> .callout[data-callout*="roll"])::before,
+.el-div:has(> .callout[data-callout*="roll"])::before,
+.markdown-rendered:has(> .callout[data-callout*="oracle"])::before,
+.el-div:has(> .callout[data-callout*="oracle"])::before,
+.markdown-rendered:has(> .callout[data-callout*="roll"])::after,
+.el-div:has(> .callout[data-callout*="roll"])::after,
+.markdown-rendered:has(> .callout[data-callout*="oracle"])::after,
+.el-div:has(> .callout[data-callout*="oracle"])::after {
+	/* Display image element */
+	content: '';
+	display: block;
+	height: var(--size-4-3);
+	background-image: var(--ribbon-img);
+	background-position: 0, 100%;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.markdown-rendered:has(> .callout[data-callout*="roll"])::after,
+.el-div:has(> .callout[data-callout*="roll"])::after,
+.markdown-rendered:has(> .callout[data-callout*="oracle"])::after,
+.el-div:has(> .callout[data-callout*="oracle"])::after {
+	/* Mirror before element */
+	transform: scaleY(-1);
+}

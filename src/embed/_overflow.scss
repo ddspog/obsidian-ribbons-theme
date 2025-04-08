@@ -1,0 +1,13 @@
+// ────Overflow Embeds─────────────────────────────────────────────────------- /
+.internal-embed:is([alt*="ovf"], [alt*="overflow"]) {
+    &,
+	& > .markdown-embed-content,
+	& > .markdown-embed-content > .markdown-rendered {
+		overflow: visible;
+	}
+
+	img {
+		overflow: visible;
+		overflow-clip-margin: unset;
+	}
+}

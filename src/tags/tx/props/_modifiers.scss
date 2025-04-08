@@ -1,0 +1,16 @@
+.block-language-tx:has(a[href="#css/tx/props/modifiers"]) table {
+	border-collapse: separate;
+	border-top: solid var(--text-title) var(--size-2-1);
+	border-bottom: solid var(--text-title) var(--size-2-1);
+	width: 100%;
+
+	thead th, tbody td {
+		color: var(--text-title);
+		border-color: var(--background-primary);
+		text-align: center;
+	}
+
+	a[href="#css/tx/props/modifiers"] {
+		display: none;
+	}
+}

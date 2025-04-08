@@ -1,0 +1,44 @@
+.cm-line.HyperMD-header-5:has(.cm-tag-csshstatblock) {
+    background-color: var(--text-title);
+	padding-top: 0;
+	margin-top: var(--p-spacing) !important;
+	--el-margin-top: var(--p-spacing) !important;
+	text-align: left;
+	text-indent: var(--size-2-2);
+	border-top-right-radius: var(--size-4-4);
+	border-bottom-right-radius: var(--size-4-4);
+
+    .cm-header-5 {
+        font-family: "T Avenir Next";
+        font-weight: 600;
+        font-style: normal;
+        font-stretch: condensed;
+        text-transform: capitalize;
+        color: var(--background-primary);
+    }
+
+	.cm-tag-csshstatblock {
+		display: none;
+	}
+}
+
+.el-h5:has(a[href="#css/h/statblock"]) {
+    background-color: var(--text-title);
+	border-top-right-radius: var(--size-4-4);
+	border-bottom-right-radius: var(--size-4-4);
+
+    h5 {
+        font-family: "T Avenir Next";
+        font-weight: 600;
+        font-style: normal;
+        font-stretch: condensed;
+        text-transform: capitalize;
+		text-indent: var(--size-2-2);
+		text-align: left;
+        color: var(--background-primary);
+    }
+
+    a[href="#css/h/statblock"] {
+        display: none;
+    }
+}

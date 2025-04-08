@@ -1,0 +1,12 @@
+body {
+	--h5-font: "T Founders Grotesk 2019";
+	--h5-weight: bold;
+	--h5-color: var(--text-subtitle);
+}
+
+.markdown-source-view .HyperMD-header-5,
+.markdown-rendered.markdown-preview-view h5 {
+	text-transform: uppercase;
+	text-align: right;
+	font-weight: bold;
+}

@@ -1,0 +1,73 @@
+// ────Move up-----------------─────────────────────────────────────────────── /
+.image-embed:is([alt*="up-4l"]) img {
+    position: relative;
+    top: -4em;
+}
+
+// ────Center images as default─────────────────────────────────────────────── /
+.image-embed:is([alt*="ctr"], [alt*="center"], :not([alt])) img,
+.image-embed img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// ────Left & Right------------─────────────────────────────────────────────── /
+.markdown-rendered, .is-live-preview {
+    & img,
+    & .image-embed {
+        &:is([alt*="left"], [alt*="locl"]) {
+            float:left;
+            margin-right: 2%;
+            margin-top: 0px;
+			--el-margin-top: 0px;
+            margin-bottom: 0px;
+            --el-margin-bottom: 0px;
+        }
+
+        &:is([alt*="right"], [alt*="locr"]) {
+            float:right;
+            margin-left: 2%;
+            margin-bottom: 0px;
+            --el-margin-bottom: 0px;
+        }
+    }
+
+    /* When multiple float elements form a paragraph, make it a line block and
+       do not supass other elements */
+    :is(p, .cm-line):has(
+        > .image-embed:is([alt*="left"], [alt*="locl"], [alt*="right"], [alt*="locr"])
+    ):has(
+        .image-embed:is([alt*="left"], [alt*="locl"], [alt*="right"], [alt*="locr"])
+        ~ .image-embed:is([alt*="left"], [alt*="locl"], [alt*="right"], [alt*="locr"])	
+    ) {
+        overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+    }
+}
+
+// ────Customizable Position------------────────────────────────────────────── /
+.image-embed[alt*="p+"] img { object-fit: cover; }
+
+.image-embed[alt*="p+c"] img { object-position: center;   }
+.image-embed[alt*="p+t"] img { object-position: top;      }
+.image-embed[alt*="p+b"] img { object-position: bottom;   }
+.image-embed[alt*="p+l"] img { object-position: left;     }
+.image-embed[alt*="p+r"] img { object-position: right;    }
+
+.image-embed[alt*="p+cl"]  img { object-position: 15%; }
+.image-embed[alt*="p+ccl"] img { object-position: 25%; }
+.image-embed[alt*="p+cr"]  img { object-position: 60%; }
+.image-embed[alt*="p+ccr"] img { object-position: 75%; }
+
+.image-embed[alt*="p+tc"]  img { object-position: 50% 10%; }
+.image-embed[alt*="p+tcc"] img { object-position: 50% 20%; }
+.image-embed[alt*="p+cct"] img { object-position: 50% 30%; }
+.image-embed[alt*="p+ct"]  img { object-position: 50% 40%; }
+
+.image-embed[alt*="p+cb"]  img { object-position: 50% 60%; }
+.image-embed[alt*="p+ccb"] img { object-position: 50% 70%; }
+.image-embed[alt*="p+bc"]  img { object-position: 50% 80%; }
+.image-embed[alt*="p+bcc"] img { object-position: 50% 90%; }

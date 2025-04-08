@@ -1,0 +1,91 @@
+@mixin paint-ball-links($icon) {
+	a:has(.iconize-icon-in-link[data-icon=#{$icon}]) .iconize-icon-in-link[data-icon=#{$icon}],
+	.cm-line:has(.iconize-icon-in-link[title=#{$icon}]) .iconize-icon-in-link[title=#{$icon}] {
+		display: none;
+	}
+
+    a:has(.iconize-icon-in-link[data-icon=#{$icon}]),
+	.cm-line:has(.iconize-icon-in-link[title=#{$icon}]) .iconize-icon-in-link[title=#{$icon}] + img + span > a {
+        font-weight: 600;
+		font-size: calc(var(--font-text-size) - 1px);
+		text-transform: capitalize;
+        text-decoration: none;
+
+		@if $icon == "🟢" {
+			color: var(--color-green);
+		} @else if $icon == "🟠" {
+			color: var(--color-orange);
+		} @else if $icon == "🔵" {
+			color: var(--color-blue);
+		} @else if $icon == "🟡" {
+			color: var(--color-yellow);
+		} @else if $icon == "🟣" {
+			color: var(--color-purple);
+		} @else if $icon == "🟤" {
+			color: var(--color-base-60);
+		} @else if $icon == "🔴" {
+			color: var(--color-red);
+		} @else if $icon == "🆑" {
+			color: var(--color-cyan);
+		}
+    }
+}
+
+@include paint-ball-links("🟢");
+@include paint-ball-links("🟠");
+@include paint-ball-links("🔵");
+@include paint-ball-links("🟡");
+@include paint-ball-links("🟣");
+@include paint-ball-links("🟤");
+@include paint-ball-links("🔴");
+@include paint-ball-links("🆑");
+
+@mixin paint-square-links($icon) {
+	a:has(.iconize-icon-in-link[data-icon=#{$icon}]) .iconize-icon-in-link[data-icon=#{$icon}],
+	.cm-line:has(.iconize-icon-in-link[title=#{$icon}]) .iconize-icon-in-link[title=#{$icon}] {
+		display: none;
+	}
+
+    a:has(.iconize-icon-in-link[data-icon=#{$icon}]),
+	.cm-line:has(.iconize-icon-in-link[title=#{$icon}]) .iconize-icon-in-link[title=#{$icon}] + img + span > a {
+        font-weight: normal;
+		font-size: calc(var(--font-text-size) - 1px);
+		text-transform: capitalize;
+		text-decoration-style: double;
+		color: var(--color-base-70);
+
+		@if $icon == "🟩" {
+			text-decoration-color: var(--color-green);
+		} @else if $icon == "🟧" {
+			text-decoration-color: var(--color-orange);
+		} @else if $icon == "🟦" {
+			text-decoration-color: var(--color-blue);
+		} @else if $icon == "🟨" {
+			text-decoration-color: var(--color-yellow);
+		} @else if $icon == "🟪" {
+			text-decoration-color: var(--color-purple);
+		} @else if $icon == "🟫" {
+			text-decoration-color: var(--color-base-60);
+		} @else if $icon == "🟥" {
+			text-decoration-color: var(--color-red);
+		} @else if $icon == "🆔" {
+			text-decoration-color: var(--color-cyan);
+		}
+    }
+}
+
+@include paint-square-links("🟩");
+@include paint-square-links("🟧");
+@include paint-square-links("🟦");
+@include paint-square-links("🟨");
+@include paint-square-links("🟪");
+@include paint-square-links("🟫");
+@include paint-square-links("🟥");
+@include paint-square-links("🆔");
+
+/* Solve strange bug with duplicate icon on links inside Dataview metadata */
+.internal-link {
+	> .iconize-icon-in-link[data-icon] + .iconize-icon-in-link[data-icon] {
+		display: none;
+	}
+}

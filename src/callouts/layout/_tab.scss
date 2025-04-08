@@ -1,0 +1,13 @@
+.callout[data-callout="l/tab"] {
+	background-color: var(--background-primary);
+	--callout-color: var(--text-normal);
+
+	.callout-title-inner {
+		font-family: "T Avenir Next";
+		font-stretch: condensed;
+	}
+
+	.callout-icon {
+		display: none;
+	}
+}

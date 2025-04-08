@@ -1,0 +1,31 @@
+.luck-ball {
+	width: var(--size-4-8);
+	height: var(--size-4-8);
+	margin-left: var(--size-4-1);
+	margin-right: var(--size-4-1);
+	border-radius: var(--size-4-4);
+}
+
+.death-savings-ball {
+	width: var(--size-4-6);
+	height: var(--size-4-6);
+	margin-left: var(--size-4-1);
+	margin-right: var(--size-4-1);
+	border-radius: var(--size-4-4);
+}
+
+.luck-ball,
+.death-savings-ball {
+    display: inline-block;
+	vertical-align: middle;
+
+	background-color: var(--text-faint);
+
+	&::after, &::before {
+		display: none;
+	}
+
+	&.is-enabled {
+		background-color: var(--color-accent);
+	}
+}

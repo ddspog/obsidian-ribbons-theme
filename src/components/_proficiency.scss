@@ -1,0 +1,53 @@
+[class*="proficiency-"] {
+	&[class*="-dot"] {
+		display: inline-block;
+		width: calc(var(--size-4-2) + var(--size-2-1));
+		height: calc(var(--size-4-2) + var(--size-2-1));
+		border-radius: var(--size-4-2);
+
+		position: relative;
+		top: -0.5em;
+		left: 0.2em;
+
+		&.has-advantage::after {
+			font-size: var(--size-4-2);
+			position: absolute;
+			top: anchor(top, 6%);
+			left: anchor(left, 18%);
+		}
+	}
+
+	&[class*="-ball"] {
+		display: inline-block;
+		width: calc(var(--size-4-4) + var(--size-2-1));
+		height: calc(var(--size-4-4) + var(--size-2-1));
+		border-radius: var(--size-4-4);
+
+		&.has-advantage::after {
+			font-size: var(--size-4-2);
+			position: absolute;
+			top: anchor(top, 6%);
+			left: anchor(left, 18%);
+		}
+	}
+
+	background-color: var(--text-faint);
+
+	&.has-advantage::after {
+		content: 'A';
+		display: inline-block;
+		color: var(--background-primary);
+	}
+
+	&::after, &::before {
+		display: none;
+	}
+
+	&.is-proficient {
+		background-color: var(--color-accent);
+	}
+
+	&.has-advantage:not(&.is-proficient) {
+		background-color: var(--color-green);
+	}
+}

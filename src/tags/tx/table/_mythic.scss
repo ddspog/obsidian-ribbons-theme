@@ -1,0 +1,44 @@
+.block-language-tx:has(a[href="#css/tx/mythic"]) table {
+    width: var(--size-4-8);
+    font-family: "T Minion";
+
+    thead th, tbody td {
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    thead {
+        border-bottom: solid var(--background-primary) var(--size-4-4);
+        box-sizing: border-box;
+
+        th {
+            border-color: var(--background-mythic) !important;
+            background-color: var(--background-mythic) !important;
+            color: var(--background-primary);
+            font-weight: normal;
+            font-family: "T Minion Display";
+            line-height: 2.5;
+        }
+    }
+
+    tbody {
+        display: block;
+        border-top: solid black var(--size-4-2);
+        border-bottom: solid black var(--size-4-2);
+        border-left: solid black 1px;
+        border-right: solid black 1px;
+
+        td {
+            padding: var(--size-4-3);
+            border: solid black 1px;
+        }
+
+        td:not(:has(a[href="#css/cell/flashpoint"]), :has(a[href="#css/cell/conclusion"])) {
+            background-color: var(--background-primary) !important;
+        }
+    }
+
+    a[href="#css/tx/mythic"] {
+        display: none;
+    }
+}

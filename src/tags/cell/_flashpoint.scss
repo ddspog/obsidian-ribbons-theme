@@ -1,0 +1,7 @@
+td:has(a[href="#css/cell/flashpoint"]) {
+	background-color: var(--background-secondary) !important;
+
+	a[href="#css/cell/flashpoint"] {
+		display: none !important;
+	}
+}

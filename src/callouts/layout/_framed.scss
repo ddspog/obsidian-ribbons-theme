@@ -1,0 +1,46 @@
+.callout[data-callout*="l/framed-"] {
+	background: none;
+	--callout-color: var(--text-normal);
+
+	padding-top: var(--size-4-2);
+	padding-bottom: var(--size-4-2);
+	padding-left: var(--size-4-2);
+	padding-right: var(--size-4-2);
+
+	border-image-source: var(--frame-a-img);
+	border-image-slice: 30% 30%;
+	border-image-width: var(--size-4-3);
+	border-image-outset: var(--size-2-3) var(--size-2-2);
+
+	> .callout-title {
+		padding-bottom: var(--size-4-2);
+
+		> .callout-icon {
+			display: none;
+		}
+	
+		> .callout-title-inner {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	> .callout-content {
+		> .block-language-tx {
+			padding: var(--size-4-2);
+		}
+	}
+}
+
+.callout[data-callout="l/framed-b"] {
+	border-image-source: var(--frame-b-img);
+	border-image-slice: 30% 30%;
+	border-image-width: var(--size-4-3);
+	border-image-outset: var(--size-2-3) var(--size-2-2);
+}
+
+.markdown-source-view.mod-cm6 .callout-content .callout:is([data-callout*="l/framed-"]) +
+.markdown-source-view.mod-cm6 .callout-content .callout:is([data-callout*="l/framed-"]) {
+	margin-top: var(--size-4-2);
+	--el-margin-top: var(--size-4-2);
+}

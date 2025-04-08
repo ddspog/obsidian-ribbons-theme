@@ -1,0 +1,23 @@
+.dataview .inline-field-standalone-value,
+.dataview .inline-field-value,
+.dataview .inline-field-key {
+	padding-left: unset;
+	padding-right: unset;
+	font-family: unset;
+	background-color: unset;
+	color: unset;
+}
+
+.dataview .inline-field-key {
+	text-transform: capitalize;
+
+	&::after {
+		content: ': ';
+	}
+}
+
+.dataview :is(.inline-field-standalone-value, .inline-field-value)::after {
+	color: var(--text-faint);
+	content: '\209A';
+	opacity: 0.5;
+}

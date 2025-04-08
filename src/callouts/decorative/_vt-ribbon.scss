@@ -1,0 +1,83 @@
+
+
+.callout[data-callout="combat"] {
+	background-color: #ebd6c1;
+	--callout-icon: lucide-sword;
+}
+
+.callout[data-callout="rules"],
+.callout[data-callout="rules"] .markdown-preview-view {
+	--callout-icon: lucide-scroll;
+	--callout-title-size: calc(var(--font-text-size) + var(--size-2-1));
+	background-color: #e0d6df;
+	font-family: "T Avenir Next";
+	font-stretch: condensed;
+}
+
+.callout[data-callout="combat"],
+.callout[data-callout="rules"] {
+	--callout-color: 0, 0, 0;
+
+	/* Ribbon Border */
+	border-style: solid;
+	border-width: var(--size-2-1) calc(var(--size-2-3) / 2);
+	border-radius: 0;
+	border-color: var(--text-faint) var(--text-normal);
+
+	/* Freeing space to stick ::after and ::before to border */
+	position: relative;
+	left: var(--size-4-4);
+	margin: 0 0;
+	padding: var(--size-4-5) var(--size-4-3) var(--size-4-6) var(--size-4-4);
+	width: calc(100% - var(--size-4-4) * 2);
+
+	/* Content */
+	.callout-content {
+		overflow-wrap: break-word;
+		color: black;
+
+		th,
+		td {
+			border-color: #ebd6c1;
+		}
+
+		:is(ol, li)::marker {
+			color: black;
+		}
+	}
+}
+
+.markdown-rendered:has(> .callout[data-callout="combat"])::before,
+.el-div:has(> .callout[data-callout="combat"])::before,
+.markdown-rendered:has(> .callout[data-callout="rules"])::before,
+.el-div:has(> .callout[data-callout="rules"])::before,
+.markdown-rendered:has(> .callout[data-callout="combat"])::after,
+.el-div:has(> .callout[data-callout="combat"])::after,
+.markdown-rendered:has(> .callout[data-callout="rules"])::after,
+.el-div:has(> .callout[data-callout="rules"])::after {
+	/* Display image element */
+	content: '';
+	display: block;
+	height: var(--size-4-3);
+	background-image: var(--ribbon-img);
+	background-position: 0, 100%;
+	background-size: contain;
+	background-repeat: no-repeat;
+
+	/* Position beside the element horizontally */
+	position: relative;
+	top: var(--size-4-3);
+	width: 100%;
+}
+
+.markdown-rendered:has(> .callout[data-callout="combat"])::after,
+.el-div:has(> .callout[data-callout="combat"])::after,
+.markdown-rendered:has(> .callout[data-callout="rules"])::after,
+.el-div:has(> .callout[data-callout="rules"])::after {
+	/* Adjust element */
+	position: relative;
+	top: calc(-1 * var(--size-4-3));
+
+	/* Mirror before element */
+	transform: scaleY(-1);
+}

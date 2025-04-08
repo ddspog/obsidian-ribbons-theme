@@ -1,0 +1,36 @@
+td:has(.exhaustion-bar) {
+	height: 2.6rem;
+
+	& > p {
+		margin: 0;
+	}
+}
+
+.exhaustion-bar {
+	display: inline-block;
+	position: relative;
+	top: var(--size-4-1);
+	width: 15ch;
+	height: 20px;
+	background-color: #e0e0e0;
+	border-radius: 5px;
+	overflow: hidden;
+	z-index: 0;
+
+	.fill {
+		position: absolute;
+		height: 100%;
+		background-color: #76c7c0;
+		width: 0; // This will be dynamically set
+		z-index: 1;
+	}
+
+	&::before {
+		content: "1 | 2 | 3 | 4 | 5 | 6";
+		position: absolute;
+		top: -2px;
+		transform: translateX(-50%);
+		color: #333;
+		z-index: 2;
+	}
+}

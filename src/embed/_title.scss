@@ -1,0 +1,59 @@
+// ────Hide File Title─────────────────────────────────────────────────────--─ /
+.internal-embed:is(
+	[alt~="no-t"], [alt~="no-title"]
+) :is(.markdown-embed-title, .file-embed-title) {
+	display: none;
+}
+
+.internal-embed :is(.markdown-embed-title, .file-embed-title) {
+	font-family: "T Avenir Next";
+	font-size: var(--h1-size);
+	color: var(--text-title);
+	text-transform: small-caps;
+	font-weight: 600;
+	text-align: left;
+}
+
+// ────Hide Inline Title────────────────────────────────────────────────────── /
+.internal-embed:is(
+	[alt~="no-it"], [alt~="no-inline-title"]
+) .inline-title {
+	display: none;
+}
+
+// ────Hide callout Titles─────────────────────────────────────────────────--- /
+.internal-embed:is(
+	[alt~="no-ct"], [alt~="no-callout-title"]
+) .callout-title {
+	display: none;
+}
+
+// ────Hide props tables------------------──────────────────────────────────── /
+.internal-embed:is(
+	[alt~="no-pt"], [alt~="no-props-table"]
+) {
+	table:has(a[href*="#css/tx/props"]) {
+		display: none;
+	}
+} 
+
+// ────Show Title------------───────────────────────────────────────────────── /
+.internal-embed:is(
+    [alt~="ttl"], [alt~="title"]
+) .markdown-embed-title {
+	display: block;
+}
+
+// ────Hide Dataview------------────────────────────────────────────────────── /
+.internal-embed:is(
+    [alt~="no-dv"], [alt~="no-dataview"]
+) .block-language-dataviewjs {
+	display: none;
+}
+
+// ────Hide Recursion-----------────────────────────────────────────────────── /
+.internal-embed .internal-embed:is(
+    [alt~="no-rec"], [alt~="no-recursion"]
+) {
+	display: none;
+}

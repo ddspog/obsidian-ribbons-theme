@@ -1,0 +1,34 @@
+.attr-display {
+	text-align: center;
+	align-content: center;
+
+	&.h2-size {
+		font-size: var(--h2-size);
+		height: 3.2rem;
+	}
+
+	&.h4-size {
+		font-size: var(--h4-size);
+		height: 2.6rem;
+	}
+
+	&.h6-size {
+		font-size: var(--h6-size);
+		height: 2.6rem;
+	}
+
+	> .modifier {
+		font-size: calc(var(--h6-size) - var(--size-4-6));
+		font-style: italic;
+		position: relative;
+		top: calc(0px - var(--size-4-4));
+	}
+
+	&.short {
+		font-family: var(--font-text-theme);
+		font-size: var(--font-text-size);
+		display: table-cell;
+
+		text-wrap: balance;
+	}
+}

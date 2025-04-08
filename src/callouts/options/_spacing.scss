@@ -1,0 +1,17 @@
+.callout:is(
+	[data-callout-metadata~="cmb-4"]
+) > .callout-content > .callout {
+	margin-bottom: var(--size-4-1);
+}
+
+.callout:is(
+	[data-callout-metadata~="cmb-6"]
+) > .callout-content > .callout {
+	margin-bottom: calc(var(--size-4-1) + var(--size-2-1));
+}
+
+.callout:is(
+	[data-callout-metadata~="cmb-8"]
+) > .callout-content > .callout {
+	margin-bottom: var(--size-4-2);
+}

@@ -1,0 +1,19 @@
+@use '../../assets';
+
+.callout[data-callout="letter"] {
+	--callout-color: 0, 0, 0;
+	--callout-icon: lucide-signature;
+
+	/* Letter Border */
+	border: solid transparent;
+	border-width: var(--size-4-5) var(--size-4-2);
+	border-image-source: assets.$img-letter;
+	border-image-repeat: repeat;
+	border-image-slice: 20 10 20 10 fill;
+
+	/* Content */
+	.callout-content {
+		font-family: "T Baskerville";
+		color: black;
+	}
+}

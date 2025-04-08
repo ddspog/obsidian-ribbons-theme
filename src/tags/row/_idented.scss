@@ -1,0 +1,7 @@
+tbody td:has(a[href="#css/row/idented"]) {
+    text-indent: var(--size-4-4);
+
+    a[href="#css/row/idented"] {
+        display: none;
+    }
+}

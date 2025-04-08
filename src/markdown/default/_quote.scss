@@ -1,0 +1,79 @@
+body {
+	& /* Highlight inside - Citation */ {
+		.HyperMD-quote:has(> span.cm-highlight) {
+			/* Position element */
+			text-align: end;
+		
+			/* Alter its font style */
+			.cm-highlight {
+				background-color: var(--background-primary);
+				color: var(--h3-color);
+				font-weight: bold;
+			}
+		}
+		
+		.markdown-preview-view blockquote mark {
+			/* Position element */
+			position: relative;
+			left: 90%;
+		
+			/* Alter its font style */
+			background-color: var(--background-primary);
+			color: var(--h3-color);
+			font-weight: bold;
+		}
+	}
+
+	.markdown-preview-view blockquote {
+		font-style: italic;
+	}
+
+	.HyperMD-quote,
+	.markdown-preview-view blockquote {
+		/* Gradient on background*/
+		--blockquote-border-color: var(--text-faint);
+		background-image: linear-gradient(to right,
+				var(--background-secondary),
+				var(--background-primary));
+
+		/* Spacing to add ::before element */
+		width: 80%;
+		left: var(--size-4-6);
+
+		/* Content */
+		color: var(--text-faint);
+		font-family: "T Minion Caption";
+		font-size: var(--font-smallest);
+		text-indent: var(--size-2-1) !important;
+		line-height: var(--line-height-normal);
+
+		/* Spacing to center content */
+		margin-bottom: var(--size-4-2);
+		--el-margin-bottom: var(--size-4-2);
+		padding-left: var(--size-4-5);
+		padding-top: var(--size-4-2);
+		padding-bottom: var(--size-4-2);
+		padding-right: var(--size-4-6);
+		position: relative;
+	}
+
+	.HyperMD-quote:after,
+	.markdown-preview-view blockquote:after {
+		/* Display character */
+		content: "\275D";
+		font-size: calc(var(--font-small) * 2.5);
+		color: var(--text-faint);
+
+		/* Position beside block */
+		position: absolute;
+		height: calc(var(--font-small) * 2);
+		top: calc(0% - var(--size-2-2));
+		left: calc(0% - var(--size-4-8));
+	}
+
+	.HyperMD-quote+.HyperMD-quote:after,
+	.markdown-preview-view blockquote+.markdown-preview-view blockquote:after {
+		/* Direct siblings won't show nothing */
+		content: '';
+	}
+}

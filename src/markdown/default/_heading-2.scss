@@ -1,0 +1,9 @@
+body {
+	--h2-variant: small-caps;
+}
+
+.markdown-source-view .HyperMD-header.HyperMD-header-2,
+.markdown-rendered.markdown-preview-view h2 {
+	text-align: left;
+	text-indent: var(--size-4-3);
+}

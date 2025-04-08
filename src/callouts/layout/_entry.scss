@@ -1,0 +1,39 @@
+.callout[data-callout="l/entry"] {
+	background-color: var(--background-primary);
+	--callout-color: var(--text-normal);
+	padding: 0;
+	margin-top: var(--p-spacing) !important;
+	--el-margin-top: var(--p-spacing) !important;
+	/* margin-bottom: 0px !important; */
+
+	> div {
+		display: inline;
+	}
+
+	.callout-title {
+		float: inline-start;
+		line-height: var(--line-height-normal);
+		font-style: italic;
+
+		.callout-icon {
+			display: none;
+		}
+
+		.callout-title-inner::after {
+			content: ".\00a0";
+			display: inline-block;
+		}
+	}
+
+	.callout-content {
+		p:first-child {
+			margin-top: 0px;
+			--el-margin-top: 0px;
+		}
+
+		p:last-child {
+			margin-bottom: 0px;
+			--el-margin-bottom: 0px;
+		}
+	}
+}

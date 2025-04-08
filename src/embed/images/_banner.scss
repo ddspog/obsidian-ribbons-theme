@@ -1,0 +1,40 @@
+// ────Banner----------------──────────────────────────────────────────────--─ /
+img[alt*="banner"]:not([width]),
+.image-embed[alt*="banner"]:not([width]) img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    margin-bottom: 0px;
+    --el-margin-bottom: 0px;
+    clear: both;
+}
+
+img[alt~="banner"],
+.image-embed[alt~="banner"] img {
+	height: var(--small);
+}
+
+img[alt~="banner+small"],
+.image-embed[alt~="banner+small"] img {
+	height: var(--tiny);
+}
+
+img[alt~="banner+tall"],
+.image-embed[alt~="banner+tall"] img {
+	height: var(--medium);
+}
+
+// Customizable
+:is(img, .internal-embed)[alt*="sban"],
+:is(img, .internal-embed)[alt~="sban"] {
+    object-fit: cover;
+    width: 100%;
+}
+
+.hover-popover .pixel-banner-image {
+	--pixel-banner-height: 128px !important;
+}
+
+.hover-popover .mod-header .inline-title {
+	display: block;
+}

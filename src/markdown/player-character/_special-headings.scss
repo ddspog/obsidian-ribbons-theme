@@ -1,0 +1,13 @@
+.markdown-rendered.note-player-character > .markdown-preview-section > .mod-ui ~ div:not(.mod-ui) {
+	h1[data-heading="Sheet"] {
+		font-size: small;
+		text-decoration: none;
+		margin-bottom: 0;
+		margin-top: var(--size-4-2);
+		color: var(--background-primary);
+
+		span.collapse-icon {
+			opacity: 1;
+		}
+	}
+}

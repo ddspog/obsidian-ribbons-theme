@@ -1,0 +1,17 @@
+.block-language-tx:has(a[href="#css/tx/props/stats"]) table {
+    td {
+        border-color: var(--background-primary);
+
+        strong {
+            color: var(--text-title);
+        }
+    }
+
+	tr:has(.dataview-null-value) {
+		display: none;
+	}
+
+    a[href="#css/tx/props/stats"] {
+        display: none;
+    }
+}

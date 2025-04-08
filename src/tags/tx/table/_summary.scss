@@ -1,0 +1,18 @@
+.block-language-tx:has(a[href="#css/tx/summary"]) table {
+    thead th, tbody td {
+        border-color: var(--background-primary);
+    }
+
+    thead th {
+        font-style: italic;
+        font-weight: normal;
+    }
+
+    tbody td:first-child {
+        font-weight: bold;
+    }
+
+    a[href="#css/tx/summary"] {
+        display: none;
+    }
+}

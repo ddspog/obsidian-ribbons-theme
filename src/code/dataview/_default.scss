@@ -1,0 +1,51 @@
+.block-language-dataview {
+    overflow: auto;
+
+    .cm-table-widget.markdown-rendered .table-wrapper {
+        min-width: 100%;
+    } //min-width to fix overflow colum button issue
+
+    table {
+        overflow-x: scroll;
+		margin-block-start: 0;
+		width: 100%;
+
+        th, td {
+            white-space: nowrap;
+        }
+		
+		caption {
+			font-family: "T Avenir Next";
+			font-weight: normal;
+			font-stretch: condensed;
+			text-transform: uppercase;
+			color: var(--text-title);
+		}
+	
+		thead th {
+			border: solid var(--text-title) 1px !important;
+			background-color: var(--text-title) !important;
+			color: var(--background-primary) !important;
+			font-family: "T Founders Grotesk 2019";
+			font-weight: normal;
+			font-stretch: condensed;
+			text-transform: uppercase;
+		}
+	
+		tbody {
+			border-bottom: solid var(--text-title) 2px;
+	
+			td {
+				font-family: "T Avenir Next";
+				border-top: solid var(--text-title) 1px;
+				border-left: var(--background-primary);
+				border-right: var(--background-primary);
+				font-stretch: condensed;
+			}
+		}
+	}
+}
+
+.el-p:has(.dataview-inline-query .skip) {
+	display: none;
+}

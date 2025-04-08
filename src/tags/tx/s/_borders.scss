@@ -1,0 +1,9 @@
+.block-language-tx:has(a[href="#css/tx/s/no-top-header-border"]) table {
+	thead tr:first-child {
+		border-top: none;
+	}
+
+	a[href="#css/tx/s/no-top-header-border"] {
+		display: none;
+	}
+}

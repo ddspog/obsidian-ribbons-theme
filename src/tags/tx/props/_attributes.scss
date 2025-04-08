@@ -1,0 +1,65 @@
+.markdown-rendered:has(a[href="#css/tx/props/attributes"]) table:has(a[href="#css/tx/props/attributes"]) {
+	margin-block-start: 0px;
+	margin-block-end: 0px;
+}
+
+.block-language-tx:has(a[href="#css/tx/props/attributes"]) table {
+	width: 100%;
+
+	th, td {
+		border: none;
+		color: var(--text-title);
+		text-align: center;
+	
+		code {
+			display: unset;
+			background: transparent;
+		}
+	}
+
+	thead tr:nth-child(odd) {
+		border-top: solid var(--text-title) var(--size-2-2);
+
+		th {
+			font-size: var(--h2-size);
+		}
+	}
+
+	thead tr:nth-child(even) {
+		border-bottom: solid var(--text-title) var(--size-2-2);
+
+		th {
+			font-size: var(--h2-size);
+			font-weight: normal;
+			vertical-align: middle;
+
+			// .mb-view-inline {
+			// 	.mb-view-text {
+			// 		font-size: var(--h2-size);
+			// 	}
+			// }
+
+			em {
+				font-size: calc(var(--h6-size) - var(--size-4-2));
+				position: relative;
+				top: calc(0px - var(--size-4-4));
+
+				// .mb-view-inline {
+				// 	.mb-view-text {
+				// 		font-size: inherit;
+				// 	}
+				// }
+			}
+		}
+	}
+
+	thead th {
+		font-family: var(--font-text-theme);
+		white-space: nowrap;
+		vertical-align: middle;
+	}
+
+	a[href="#css/tx/props/attributes"] {
+		display: none;
+	}
+}

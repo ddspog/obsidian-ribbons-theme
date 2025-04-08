@@ -1,0 +1,31 @@
+.callout:is(
+	[data-callout-metadata~="t-left"]
+) {
+	&, p {
+		text-align: left;
+	}
+
+	div:has(p) {
+		justify-content: left;
+	}
+
+	.callout-title {
+		display: inline;
+	}
+}
+
+.callout:is(
+	[data-callout-metadata~="t-right"]
+) {
+	&, p {
+		text-align: right;
+	}
+
+	div:has(p) {
+		justify-content: right;
+	}
+
+	.callout-title {
+		display: inline;
+	}
+}

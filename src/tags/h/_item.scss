@@ -1,0 +1,96 @@
+.cm-line.HyperMD-header-3:has(.cm-tag-csshitem) {
+	background-image: linear-gradient(to right,
+		var(--background-secondary),
+		var(--background-primary));
+	border-top: solid var(--text-title) 1px;
+	border-bottom: solid var(--text-title) 1px;
+	padding-top: var(--size-2-2);
+	padding-left: var(--size-4-2);
+	padding-bottom: var(--size-2-1);
+	text-indent: var(--size-2-2);
+
+    .cm-header-3 {
+        font-family: "T Avenir Next";
+        font-style: normal;
+        font-stretch: condensed;
+        text-transform: capitalize;
+        color: var(--text-title);
+    }
+
+	.cm-tag-csshitem {
+		display: none;
+	}
+}
+
+.el-h3:has(a[href="#css/h/item"]) {
+	h3 {
+		background-image: linear-gradient(to right,
+			var(--background-secondary),
+			var(--background-primary));
+		border-top: solid var(--text-title) 1px;
+		border-bottom: solid var(--text-title) 1px;
+		padding-top: var(--size-2-2);
+		padding-left: var(--size-4-2);
+		padding-bottom: var(--size-2-1);
+		text-indent: var(--size-2-2);
+        font-family: "T Avenir Next";
+        font-style: normal;
+        font-stretch: condensed;
+        text-transform: capitalize;
+        color: var(--text-title);
+		margin: 0 !important;
+    }
+
+    a[href="#css/h/item"] {
+        display: none;
+    }
+}
+
+.cm-line.HyperMD-header-2:has(.cm-tag-csshitem) {
+	background-image: linear-gradient(to right,
+		var(--background-secondary),
+		var(--background-primary));
+	border-top: solid var(--text-title) 1px;
+	border-bottom: solid var(--text-title) 1px;
+	padding-top: var(--size-2-2);
+	padding-left: var(--size-4-2);
+	padding-bottom: var(--size-2-1);
+	text-indent: var(--size-2-2);
+
+    .cm-header-2 {
+        font-family: "T Avenir Next";
+        font-style: normal;
+        font-stretch: condensed;
+        text-transform: capitalize;
+        color: var(--text-title);
+    }
+
+	.cm-tag-csshitem {
+		display: none;
+	}
+}
+
+.el-h2:has(a[href="#css/h/item"]) {
+	background-image: linear-gradient(to right,
+		var(--background-secondary),
+		var(--background-primary));
+	border-top: solid var(--text-title) 1px;
+	border-bottom: solid var(--text-title) 1px;
+	padding-top: var(--size-2-2);
+	padding-left: var(--size-4-2);
+	padding-bottom: var(--size-2-1);
+	text-indent: var(--size-2-2);
+
+    h2 {
+        font-family: "T Avenir Next";
+        font-style: normal;
+        font-stretch: condensed;
+        text-transform: capitalize;
+        color: var(--text-title);
+		margin: 0 !important;
+    }
+
+    a[href="#css/h/item"] {
+        display: none;
+    }
+}

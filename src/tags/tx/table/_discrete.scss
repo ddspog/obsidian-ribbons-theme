@@ -1,0 +1,77 @@
+.block-language-tx:has(a[href="#css/tx/table"]),
+.el-table,
+.cm-table-widget,
+.markdown-preview-view {
+	& > table {
+		margin-block-start: 0;
+		width: 100%;
+
+		caption {
+			font-family: "T Avenir Next";
+			font-weight: normal;
+			font-stretch: condensed;
+			text-transform: uppercase;
+			color: var(--text-title);
+		}
+
+		thead th {
+			border: solid var(--text-title) 1px !important;
+			background-color: var(--text-title) !important;
+			color: var(--background-primary) !important;
+			font-family: "T Founders Grotesk 2019";
+			font-weight: normal;
+			font-stretch: condensed;
+			text-transform: uppercase;
+
+			.cm-active {
+				text-transform: none !important;
+				background-color: unset !important;
+			}
+		}
+
+		tbody {
+			border-bottom: solid var(--text-title) 2px;
+
+			td {
+				font-family: "T Avenir Next";
+				border-top: solid var(--text-title) 1px;
+				border-left: var(--background-primary);
+				border-right: var(--background-primary);
+				font-stretch: condensed;
+			}
+		}
+
+		a[href="#css/tx/table"] {
+			display: none;
+		}
+	}
+
+	&:has(+.el-p > p > .dice-roller) {
+		table {
+			margin-bottom: 0;
+		}
+	}
+
+	& + .el-p:has(.dice-roller) {
+		& > p {
+			margin-top: 0;
+			border-bottom: solid var(--text-title) 2px;
+			margin-bottom: var(--p-spacing);
+			padding: var(--size-2-2) var(--size-4-2);
+
+			.dice-roller {
+				.dice-roller-result {
+					font-family: "T Avenir Next";
+					font-weight: normal;
+					font-stretch: condensed;
+					color: var(--text-title);
+
+					ol {
+						margin-block-start: 0;
+						margin-block-end: 0;
+					}
+				}
+			}
+		}
+	}
+}

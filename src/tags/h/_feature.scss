@@ -1,0 +1,39 @@
+.cm-line.HyperMD-header:has(.cm-tag-csshfeature) {
+    background-color: var(--text-faint);
+	padding-top: 0;
+	margin-top: var(--p-spacing) !important;
+	--el-margin-top: var(--p-spacing) !important;
+	left: 0px;
+
+    .cm-header-4 {
+        font-family: "T Avenir Next";
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: condensed;
+        text-transform: uppercase;
+        color: var(--background-primary);
+    }
+
+	.cm-tag-csshfeature {
+		display: none;
+	}
+}
+
+.el-h4:has(a[href="#css/h/feature"]) {
+    background-color: var(--text-faint);
+	left: 0px
+	// padding-top: 0 !important;
+
+    h4 {
+        font-family: "T Avenir Next";
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: condensed;
+        text-transform: uppercase;
+        color: var(--background-primary);
+    }
+
+    a[href="#css/h/feature"] {
+        display: none;
+    }
+}

@@ -1,0 +1,28 @@
+.workspace-leaf-content[data-type="file-properties"] {
+	.metadata-property[data-property-key*="."] {
+		> .metadata-property-value {
+			display: none;
+		}
+
+		> .metadata-property-key {
+			background-image: linear-gradient(to right,
+				var(--background-secondary),
+				var(--background-primary));
+			border-top: solid var(--text-title) 1px;
+			border-bottom: solid var(--text-title) 1px;
+			width: 100%;
+
+			> .metadata-property-icon > svg > path {
+				visibility: hidden;
+			}
+
+			> .metadata-property-key-input {
+				text-transform: uppercase;
+				font-family: "Avenir Next";
+				font-weight: 600;
+				font-size: calc(var(--font-size) + var(--size-2-1));
+				color: var(--text-title);
+			}
+		}
+	}
+}
