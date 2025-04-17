@@ -1,7 +1,7 @@
 {
 	"name": "Ribbons Theme",
 	"version": "1.0.0",
-	"minAppVersion": "1.0.0",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md"
+	"minAppVersion": "1.8.0",
+	"author": "ddspog",
+	"authorUrl": "https://github.com/ddspog"
 }
