@@ -2519,6 +2519,12 @@ p:has(> .internal-embed) {
   border-width: 1px;
 }
 
+.block-language-leaflet .leaflet-div-icon[data-type*=Token],
+.block-language-leaflet .leaflet-div-icon[data-type*=Token] > img {
+  width: 36px !important;
+  height: 36px !important;
+}
+
 [class*=proficiency-] {
   background-color: var(--text-faint);
 }
