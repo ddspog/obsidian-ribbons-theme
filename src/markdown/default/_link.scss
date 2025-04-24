@@ -5,6 +5,7 @@
 	}
 
     a:has(.iconize-icon-in-link[data-icon=#{$icon}]),
+	strong:has(a[data-footref=#{$icon}]),
 	.cm-line:has(.iconize-icon-in-link[title=#{$icon}]) .iconize-icon-in-link[title=#{$icon}] + img + span > a {
         font-weight: 600;
 		font-size: calc(var(--font-text-size) - 1px);
@@ -22,11 +23,17 @@
 		} @else if $icon == "🟣" {
 			color: var(--color-purple);
 		} @else if $icon == "🟤" {
-			color: var(--color-base-60);
+			color: var(--color-base-70);
+		} @else if $icon == "⚫" {
+			color: var(--color-base-50);
 		} @else if $icon == "🔴" {
 			color: var(--color-red);
 		} @else if $icon == "🆑" {
 			color: var(--color-cyan);
+		}
+
+		a[data-footref=#{$icon}] {
+			display: none;
 		}
     }
 }
@@ -37,6 +44,7 @@
 @include paint-ball-links("🟡");
 @include paint-ball-links("🟣");
 @include paint-ball-links("🟤");
+@include paint-ball-links("⚫");
 @include paint-ball-links("🔴");
 @include paint-ball-links("🆑");
 

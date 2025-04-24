@@ -15,7 +15,8 @@
 .nav-files-container [class*=nav-]:has(:is(
     [data-path*="0. "]
 ):not(
-	[data-path*="/"]
+	[data-path*="/"],
+	[data-path*="00. "]
 ))::before {
     content:'';
     display:block;
@@ -23,4 +24,24 @@
     width:calc(100% + 32px);
     background:linear-gradient(to right, var(--tab-outline-color), transparent);
     margin:var(--replete-custom-separators-vertical-padding) 0 var(--replete-custom-separators-vertical-padding) var(--replete-custom-separators-left-margin);
+}
+
+.nav-files-container [class*=nav-]:has(:is(
+	[data-path*="00. "]
+):not(
+	[data-path*="/"]
+)) {
+	background-image: linear-gradient(to right,
+		var(--background-secondary),
+		var(--background-primary));
+	border-top: solid var(--text-title) 1px;
+	border-bottom: solid var(--text-title) 1px;
+    width:calc(100% + 32px + 16px);
+	left: -32px;
+	padding-left: 32px;
+	position: relative;
+
+	.collapse-icon {
+		display: none;
+	}
 }
