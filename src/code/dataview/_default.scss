@@ -15,7 +15,7 @@
         }
 		
 		caption {
-			font-family: "T Avenir Next";
+			font-family: "My Title font", "SF Compact Display";
 			font-weight: normal;
 			font-stretch: condensed;
 			text-transform: uppercase;
@@ -26,7 +26,7 @@
 			border: solid var(--text-title) 1px !important;
 			background-color: var(--text-title) !important;
 			color: var(--background-primary) !important;
-			font-family: "T Founders Grotesk 2019";
+			font-family: "My Table font", "SF Compact Rounded";
 			font-weight: normal;
 			font-stretch: condensed;
 			text-transform: uppercase;
@@ -36,7 +36,7 @@
 			border-bottom: solid var(--text-title) 2px;
 	
 			td {
-				font-family: "T Avenir Next";
+				font-family: "My Title font", "SF Compact Display";
 				border-top: solid var(--text-title) 1px;
 				border-left: var(--background-primary);
 				border-right: var(--background-primary);

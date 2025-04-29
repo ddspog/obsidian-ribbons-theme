@@ -1,6 +1,6 @@
 .block-language-tx:has(a[href="#css/tx/mythic"]) table {
     width: var(--size-4-8);
-    font-family: "T Minion";
+    font-family: "My Text font", "New York";
 
     thead th, tbody td {
         white-space: nowrap;
@@ -16,7 +16,7 @@
             background-color: var(--background-mythic) !important;
             color: var(--background-primary);
             font-weight: normal;
-            font-family: "T Minion Display";
+            font-family: "My Headings font", "New York Extra Large";
             line-height: 2.5;
         }
     }

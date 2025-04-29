@@ -1,7 +1,7 @@
 .note-statblock,
 .embed-note-statblock .block-language-dataviewjs {
 	--h1-size: 1.6em;
-	--h1-font: "T Founders Grotesk 2019";
+	--h1-font: "My Table font", "SF Compact Rounded";
 	--h1-weight: normal;
 
 	.HyperMD-header.HyperMD-header-1,
@@ -31,7 +31,7 @@
 		.cm-hashtag-begin,
 		.cm-hashtag-end,
 		a.tag {
-			font-family: "T Founders Grotesk 2019";
+			font-family: "My Table font", "SF Compact Rounded";
 			color: var(--background-primary);
 			background: none;
 		}

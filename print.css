@@ -40,11 +40,11 @@ body {
 }
 
 body {
-  --font-text-theme: "T Minion";
+  --font-text-theme: "My Text font", "New York";
 }
 
 body {
-  --h1-font: "T Avenir Next";
+  --h1-font: "My Title font", "SF Compact Display";
   --h1-color: var(--text-title);
   --h1-variant: small-caps;
   --hi-weight: 600;
@@ -69,7 +69,7 @@ body {
 }
 
 body {
-  --h3-font: "T Minion Display";
+  --h3-font: "My Headings font", "New York Extra Large";
   --h3-weight: bold;
   --h3-color: var(--text-subtitle);
 }
@@ -90,7 +90,7 @@ body {
 }
 
 body {
-  --h5-font: "T Founders Grotesk 2019";
+  --h5-font: "My Table font", "SF Compact Rounded";
   --h5-weight: bold;
   --h5-color: var(--text-subtitle);
 }
@@ -155,7 +155,7 @@ body .markdown-preview-view blockquote {
   left: var(--size-4-6);
   /* Content */
   color: var(--text-faint);
-  font-family: "T Minion Caption";
+  font-family: "My Quote font", "New York Small";
   font-size: var(--font-smallest);
   text-indent: var(--size-2-1) !important;
   line-height: var(--line-height-normal);
@@ -529,7 +529,7 @@ p:has(> .math-inline) strong {
 
 .note-spell {
   --inline-title-size: 1.6em;
-  --inline-title-font: "T Founders Grotesk 2019";
+  --inline-title-font: "My Table font", "SF Compact Rounded";
   --inline-title-weight: normal;
 }
 .note-spell .inline-title {
@@ -541,7 +541,7 @@ p:has(> .math-inline) strong {
 }
 
 .embed-note-spell .internal-embed .markdown-embed-title {
-  font-family: "T Founders Grotesk 2019";
+  font-family: "My Table font", "SF Compact Rounded";
   font-weight: normal;
   text-transform: uppercase;
   background-color: var(--text-title);
@@ -557,7 +557,7 @@ p:has(> .math-inline) strong {
 .note-statblock,
 .embed-note-statblock .block-language-dataviewjs {
   --h1-size: 1.6em;
-  --h1-font: "T Founders Grotesk 2019";
+  --h1-font: "My Table font", "SF Compact Rounded";
   --h1-weight: normal;
 }
 .note-statblock .HyperMD-header.HyperMD-header-1,
@@ -602,7 +602,7 @@ p:has(> .math-inline) strong {
 .embed-note-statblock .block-language-dataviewjs h1 .cm-hashtag-begin,
 .embed-note-statblock .block-language-dataviewjs h1 .cm-hashtag-end,
 .embed-note-statblock .block-language-dataviewjs h1 a.tag {
-  font-family: "T Founders Grotesk 2019";
+  font-family: "My Table font", "SF Compact Rounded";
   color: var(--background-primary);
   background: none;
 }
@@ -646,7 +646,7 @@ p:has(> .math-inline) strong {
 
 .note-statblock,
 .embed-note-statblock .block-language-dataviewjs {
-  --h6-font: "T Avenir Next";
+  --h6-font: "My Title font", "SF Compact Display";
   --h6-weight: normal;
 }
 .note-statblock .HyperMD-header.HyperMD-header-6,
@@ -778,7 +778,7 @@ p:has(> .math-inline) strong {
   --callout-icon: lucide-scroll;
   --callout-title-size: calc(var(--font-text-size) + var(--size-2-1));
   background-color: #e0d6df;
-  font-family: "T Avenir Next";
+  font-family: "My Title font", "SF Compact Display";
   font-stretch: condensed;
 }
 
@@ -876,7 +876,7 @@ body {
   /* Content */
 }
 .callout[data-callout=letter] .callout-content {
-  font-family: "T Baskerville";
+  font-family: "My Letter font", "New York Medium";
   color: black;
 }
 
@@ -1180,7 +1180,7 @@ p:has(.callout[data-callout="l/block"]) {
   --callout-color: var(--text-normal);
 }
 .callout[data-callout="l/tab"] .callout-title-inner {
-  font-family: "T Avenir Next";
+  font-family: "My Title font", "SF Compact Display";
   font-stretch: condensed;
 }
 .callout[data-callout="l/tab"] .callout-icon {
@@ -1392,7 +1392,7 @@ td:has(a[href="#css/cell/conclusion"]) a[href="#css/cell/conclusion"] {
   left: 0px;
 }
 .cm-line.HyperMD-header:has(.cm-tag-csshfeature) .cm-header-4 {
-  font-family: "T Avenir Next";
+  font-family: "My Title font", "SF Compact Display";
   font-weight: normal;
   font-style: normal;
   font-stretch: condensed;
@@ -1406,7 +1406,7 @@ td:has(a[href="#css/cell/conclusion"]) a[href="#css/cell/conclusion"] {
 .el-h4:has(a[href="#css/h/feature"]) {
   background-color: var(--text-faint);
   left: 0px h4;
-  left-font-family: "T Avenir Next";
+  left-font-family: "My Title font", "SF Compact Display";
   left-font-weight: normal;
   left-font-style: normal;
   left-font-stretch: condensed;
@@ -1427,7 +1427,7 @@ td:has(a[href="#css/cell/conclusion"]) a[href="#css/cell/conclusion"] {
   text-indent: var(--size-2-2);
 }
 .cm-line.HyperMD-header-3:has(.cm-tag-csshitem) .cm-header-3 {
-  font-family: "T Avenir Next";
+  font-family: "My Title font", "SF Compact Display";
   font-style: normal;
   font-stretch: condensed;
   text-transform: capitalize;
@@ -1445,7 +1445,7 @@ td:has(a[href="#css/cell/conclusion"]) a[href="#css/cell/conclusion"] {
   padding-left: var(--size-4-2);
   padding-bottom: var(--size-2-1);
   text-indent: var(--size-2-2);
-  font-family: "T Avenir Next";
+  font-family: "My Title font", "SF Compact Display";
   font-style: normal;
   font-stretch: condensed;
   text-transform: capitalize;
@@ -1466,7 +1466,7 @@ td:has(a[href="#css/cell/conclusion"]) a[href="#css/cell/conclusion"] {
   text-indent: var(--size-2-2);
 }
 .cm-line.HyperMD-header-2:has(.cm-tag-csshitem) .cm-header-2 {
-  font-family: "T Avenir Next";
+  font-family: "My Title font", "SF Compact Display";
   font-style: normal;
   font-stretch: condensed;
   text-transform: capitalize;
@@ -1486,7 +1486,7 @@ td:has(a[href="#css/cell/conclusion"]) a[href="#css/cell/conclusion"] {
   text-indent: var(--size-2-2);
 }
 .el-h2:has(a[href="#css/h/item"]) h2 {
-  font-family: "T Avenir Next";
+  font-family: "My Title font", "SF Compact Display";
   font-style: normal;
   font-stretch: condensed;
   text-transform: capitalize;
@@ -1508,7 +1508,7 @@ td:has(a[href="#css/cell/conclusion"]) a[href="#css/cell/conclusion"] {
   border-bottom-right-radius: var(--size-4-4);
 }
 .cm-line.HyperMD-header-6:has(.cm-tag-csshsection) .cm-header-6 {
-  font-family: "T Avenir Next";
+  font-family: "My Title font", "SF Compact Display";
   font-weight: normal;
   font-style: normal;
   font-stretch: condensed;
@@ -1525,7 +1525,7 @@ td:has(a[href="#css/cell/conclusion"]) a[href="#css/cell/conclusion"] {
   border-bottom-right-radius: var(--size-4-4);
 }
 .el-h6:has(a[href="#css/h/section"]) h6 {
-  font-family: "T Avenir Next";
+  font-family: "My Title font", "SF Compact Display";
   font-weight: normal;
   font-style: normal;
   font-stretch: condensed;
@@ -1548,7 +1548,7 @@ td:has(a[href="#css/cell/conclusion"]) a[href="#css/cell/conclusion"] {
   border-bottom-right-radius: var(--size-4-4);
 }
 .cm-line.HyperMD-header-5:has(.cm-tag-csshstatblock) .cm-header-5 {
-  font-family: "T Avenir Next";
+  font-family: "My Title font", "SF Compact Display";
   font-weight: 600;
   font-style: normal;
   font-stretch: condensed;
@@ -1565,7 +1565,7 @@ td:has(a[href="#css/cell/conclusion"]) a[href="#css/cell/conclusion"] {
   border-bottom-right-radius: var(--size-4-4);
 }
 .el-h5:has(a[href="#css/h/statblock"]) h5 {
-  font-family: "T Avenir Next";
+  font-family: "My Title font", "SF Compact Display";
   font-weight: 600;
   font-style: normal;
   font-stretch: condensed;
@@ -1799,7 +1799,7 @@ tbody tr:has(a[href="#css/row/section-end"]) a[href="#css/row/section-end"] {
 .el-table > table caption,
 .cm-table-widget > table caption,
 .markdown-preview-view > table caption {
-  font-family: "T Avenir Next";
+  font-family: "My Title font", "SF Compact Display";
   font-weight: normal;
   font-stretch: condensed;
   text-transform: uppercase;
@@ -1812,7 +1812,7 @@ tbody tr:has(a[href="#css/row/section-end"]) a[href="#css/row/section-end"] {
   border: solid var(--text-title) 1px !important;
   background-color: var(--text-title) !important;
   color: var(--background-primary) !important;
-  font-family: "T Founders Grotesk 2019";
+  font-family: "My Table font", "SF Compact Rounded";
   font-weight: normal;
   font-stretch: condensed;
   text-transform: uppercase;
@@ -1834,7 +1834,7 @@ tbody tr:has(a[href="#css/row/section-end"]) a[href="#css/row/section-end"] {
 .el-table > table tbody td,
 .cm-table-widget > table tbody td,
 .markdown-preview-view > table tbody td {
-  font-family: "T Avenir Next";
+  font-family: "My Title font", "SF Compact Display";
   border-top: solid var(--text-title) 1px;
   border-left: var(--background-primary);
   border-right: var(--background-primary);
@@ -1865,7 +1865,7 @@ tbody tr:has(a[href="#css/row/section-end"]) a[href="#css/row/section-end"] {
 .el-table + .el-p:has(.dice-roller) > p .dice-roller .dice-roller-result,
 .cm-table-widget + .el-p:has(.dice-roller) > p .dice-roller .dice-roller-result,
 .markdown-preview-view + .el-p:has(.dice-roller) > p .dice-roller .dice-roller-result {
-  font-family: "T Avenir Next";
+  font-family: "My Title font", "SF Compact Display";
   font-weight: normal;
   font-stretch: condensed;
   color: var(--text-title);
@@ -1880,7 +1880,7 @@ tbody tr:has(a[href="#css/row/section-end"]) a[href="#css/row/section-end"] {
 
 .block-language-tx:has(a[href="#css/tx/mythic"]) table {
   width: var(--size-4-8);
-  font-family: "T Minion";
+  font-family: "My Text font", "New York";
 }
 .block-language-tx:has(a[href="#css/tx/mythic"]) table thead th, .block-language-tx:has(a[href="#css/tx/mythic"]) table tbody td {
   white-space: nowrap;
@@ -1895,7 +1895,7 @@ tbody tr:has(a[href="#css/row/section-end"]) a[href="#css/row/section-end"] {
   background-color: var(--background-mythic) !important;
   color: var(--background-primary);
   font-weight: normal;
-  font-family: "T Minion Display";
+  font-family: "My Headings font", "New York Extra Large";
   line-height: 2.5;
 }
 .block-language-tx:has(a[href="#css/tx/mythic"]) table tbody {
@@ -2000,7 +2000,6 @@ tbody tr:has(a[href="#css/row/section-end"]) a[href="#css/row/section-end"] {
   border-bottom: solid var(--text-title) 1px;
   width: calc(100% + 32px + 16px);
   left: -32px;
-  padding-left: 32px;
   position: relative;
 }
 .nav-files-container [class*=nav-]:has(:is([data-path*="00. "]):not([data-path*="/"])) .collapse-icon {
@@ -2455,7 +2454,7 @@ div:not(.image-embed) > img[alt][alt*=relative] {
 }
 
 .internal-embed :is(.markdown-embed-title, .file-embed-title) {
-  font-family: "T Avenir Next";
+  font-family: "My Title font", "SF Compact Display";
   font-size: var(--h1-size);
   color: var(--text-title);
   text-transform: small-caps;
@@ -2548,7 +2547,7 @@ p:has(> .internal-embed) {
   white-space: nowrap;
 }
 .block-language-dataview table caption {
-  font-family: "T Avenir Next";
+  font-family: "My Title font", "SF Compact Display";
   font-weight: normal;
   font-stretch: condensed;
   text-transform: uppercase;
@@ -2558,7 +2557,7 @@ p:has(> .internal-embed) {
   border: solid var(--text-title) 1px !important;
   background-color: var(--text-title) !important;
   color: var(--background-primary) !important;
-  font-family: "T Founders Grotesk 2019";
+  font-family: "My Table font", "SF Compact Rounded";
   font-weight: normal;
   font-stretch: condensed;
   text-transform: uppercase;
@@ -2567,7 +2566,7 @@ p:has(> .internal-embed) {
   border-bottom: solid var(--text-title) 2px;
 }
 .block-language-dataview table tbody td {
-  font-family: "T Avenir Next";
+  font-family: "My Title font", "SF Compact Display";
   border-top: solid var(--text-title) 1px;
   border-left: var(--background-primary);
   border-right: var(--background-primary);
