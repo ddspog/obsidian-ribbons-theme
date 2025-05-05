@@ -192,7 +192,8 @@ a:has(.iconize-icon-in-link[data-icon=🟢]) .iconize-icon-in-link[data-icon=�
 }
 
 a:has(.iconize-icon-in-link[data-icon=🟢]),
-strong:has(a[data-footref=🟢]),
+strong:has(a[data-footref*=🟢]),
+em:has(a[data-footref*=🟢]),
 .cm-line:has(.iconize-icon-in-link[title=🟢]) .iconize-icon-in-link[title=🟢] + img + span > a {
   font-weight: 600;
   font-size: calc(var(--font-text-size) - 1px);
@@ -200,9 +201,10 @@ strong:has(a[data-footref=🟢]),
   text-decoration: none;
   color: var(--color-green);
 }
-a:has(.iconize-icon-in-link[data-icon=🟢]) a[data-footref=🟢],
-strong:has(a[data-footref=🟢]) a[data-footref=🟢],
-.cm-line:has(.iconize-icon-in-link[title=🟢]) .iconize-icon-in-link[title=🟢] + img + span > a a[data-footref=🟢] {
+a:has(.iconize-icon-in-link[data-icon=🟢]) a[data-footref*=🟢],
+strong:has(a[data-footref*=🟢]) a[data-footref*=🟢],
+em:has(a[data-footref*=🟢]) a[data-footref*=🟢],
+.cm-line:has(.iconize-icon-in-link[title=🟢]) .iconize-icon-in-link[title=🟢] + img + span > a a[data-footref*=🟢] {
   display: none;
 }
 
@@ -212,7 +214,8 @@ a:has(.iconize-icon-in-link[data-icon=🟠]) .iconize-icon-in-link[data-icon=�
 }
 
 a:has(.iconize-icon-in-link[data-icon=🟠]),
-strong:has(a[data-footref=🟠]),
+strong:has(a[data-footref*=🟠]),
+em:has(a[data-footref*=🟠]),
 .cm-line:has(.iconize-icon-in-link[title=🟠]) .iconize-icon-in-link[title=🟠] + img + span > a {
   font-weight: 600;
   font-size: calc(var(--font-text-size) - 1px);
@@ -220,9 +223,10 @@ strong:has(a[data-footref=🟠]),
   text-decoration: none;
   color: var(--color-orange);
 }
-a:has(.iconize-icon-in-link[data-icon=🟠]) a[data-footref=🟠],
-strong:has(a[data-footref=🟠]) a[data-footref=🟠],
-.cm-line:has(.iconize-icon-in-link[title=🟠]) .iconize-icon-in-link[title=🟠] + img + span > a a[data-footref=🟠] {
+a:has(.iconize-icon-in-link[data-icon=🟠]) a[data-footref*=🟠],
+strong:has(a[data-footref*=🟠]) a[data-footref*=🟠],
+em:has(a[data-footref*=🟠]) a[data-footref*=🟠],
+.cm-line:has(.iconize-icon-in-link[title=🟠]) .iconize-icon-in-link[title=🟠] + img + span > a a[data-footref*=🟠] {
   display: none;
 }
 
@@ -232,7 +236,8 @@ a:has(.iconize-icon-in-link[data-icon=🔵]) .iconize-icon-in-link[data-icon=�
 }
 
 a:has(.iconize-icon-in-link[data-icon=🔵]),
-strong:has(a[data-footref=🔵]),
+strong:has(a[data-footref*=🔵]),
+em:has(a[data-footref*=🔵]),
 .cm-line:has(.iconize-icon-in-link[title=🔵]) .iconize-icon-in-link[title=🔵] + img + span > a {
   font-weight: 600;
   font-size: calc(var(--font-text-size) - 1px);
@@ -240,9 +245,10 @@ strong:has(a[data-footref=🔵]),
   text-decoration: none;
   color: var(--color-blue);
 }
-a:has(.iconize-icon-in-link[data-icon=🔵]) a[data-footref=🔵],
-strong:has(a[data-footref=🔵]) a[data-footref=🔵],
-.cm-line:has(.iconize-icon-in-link[title=🔵]) .iconize-icon-in-link[title=🔵] + img + span > a a[data-footref=🔵] {
+a:has(.iconize-icon-in-link[data-icon=🔵]) a[data-footref*=🔵],
+strong:has(a[data-footref*=🔵]) a[data-footref*=🔵],
+em:has(a[data-footref*=🔵]) a[data-footref*=🔵],
+.cm-line:has(.iconize-icon-in-link[title=🔵]) .iconize-icon-in-link[title=🔵] + img + span > a a[data-footref*=🔵] {
   display: none;
 }
 
@@ -252,7 +258,8 @@ a:has(.iconize-icon-in-link[data-icon=🟡]) .iconize-icon-in-link[data-icon=�
 }
 
 a:has(.iconize-icon-in-link[data-icon=🟡]),
-strong:has(a[data-footref=🟡]),
+strong:has(a[data-footref*=🟡]),
+em:has(a[data-footref*=🟡]),
 .cm-line:has(.iconize-icon-in-link[title=🟡]) .iconize-icon-in-link[title=🟡] + img + span > a {
   font-weight: 600;
   font-size: calc(var(--font-text-size) - 1px);
@@ -260,9 +267,10 @@ strong:has(a[data-footref=🟡]),
   text-decoration: none;
   color: var(--color-yellow);
 }
-a:has(.iconize-icon-in-link[data-icon=🟡]) a[data-footref=🟡],
-strong:has(a[data-footref=🟡]) a[data-footref=🟡],
-.cm-line:has(.iconize-icon-in-link[title=🟡]) .iconize-icon-in-link[title=🟡] + img + span > a a[data-footref=🟡] {
+a:has(.iconize-icon-in-link[data-icon=🟡]) a[data-footref*=🟡],
+strong:has(a[data-footref*=🟡]) a[data-footref*=🟡],
+em:has(a[data-footref*=🟡]) a[data-footref*=🟡],
+.cm-line:has(.iconize-icon-in-link[title=🟡]) .iconize-icon-in-link[title=🟡] + img + span > a a[data-footref*=🟡] {
   display: none;
 }
 
@@ -272,7 +280,8 @@ a:has(.iconize-icon-in-link[data-icon=🟣]) .iconize-icon-in-link[data-icon=�
 }
 
 a:has(.iconize-icon-in-link[data-icon=🟣]),
-strong:has(a[data-footref=🟣]),
+strong:has(a[data-footref*=🟣]),
+em:has(a[data-footref*=🟣]),
 .cm-line:has(.iconize-icon-in-link[title=🟣]) .iconize-icon-in-link[title=🟣] + img + span > a {
   font-weight: 600;
   font-size: calc(var(--font-text-size) - 1px);
@@ -280,9 +289,10 @@ strong:has(a[data-footref=🟣]),
   text-decoration: none;
   color: var(--color-purple);
 }
-a:has(.iconize-icon-in-link[data-icon=🟣]) a[data-footref=🟣],
-strong:has(a[data-footref=🟣]) a[data-footref=🟣],
-.cm-line:has(.iconize-icon-in-link[title=🟣]) .iconize-icon-in-link[title=🟣] + img + span > a a[data-footref=🟣] {
+a:has(.iconize-icon-in-link[data-icon=🟣]) a[data-footref*=🟣],
+strong:has(a[data-footref*=🟣]) a[data-footref*=🟣],
+em:has(a[data-footref*=🟣]) a[data-footref*=🟣],
+.cm-line:has(.iconize-icon-in-link[title=🟣]) .iconize-icon-in-link[title=🟣] + img + span > a a[data-footref*=🟣] {
   display: none;
 }
 
@@ -292,7 +302,8 @@ a:has(.iconize-icon-in-link[data-icon=🟤]) .iconize-icon-in-link[data-icon=�
 }
 
 a:has(.iconize-icon-in-link[data-icon=🟤]),
-strong:has(a[data-footref=🟤]),
+strong:has(a[data-footref*=🟤]),
+em:has(a[data-footref*=🟤]),
 .cm-line:has(.iconize-icon-in-link[title=🟤]) .iconize-icon-in-link[title=🟤] + img + span > a {
   font-weight: 600;
   font-size: calc(var(--font-text-size) - 1px);
@@ -300,9 +311,10 @@ strong:has(a[data-footref=🟤]),
   text-decoration: none;
   color: var(--color-base-70);
 }
-a:has(.iconize-icon-in-link[data-icon=🟤]) a[data-footref=🟤],
-strong:has(a[data-footref=🟤]) a[data-footref=🟤],
-.cm-line:has(.iconize-icon-in-link[title=🟤]) .iconize-icon-in-link[title=🟤] + img + span > a a[data-footref=🟤] {
+a:has(.iconize-icon-in-link[data-icon=🟤]) a[data-footref*=🟤],
+strong:has(a[data-footref*=🟤]) a[data-footref*=🟤],
+em:has(a[data-footref*=🟤]) a[data-footref*=🟤],
+.cm-line:has(.iconize-icon-in-link[title=🟤]) .iconize-icon-in-link[title=🟤] + img + span > a a[data-footref*=🟤] {
   display: none;
 }
 
@@ -312,7 +324,8 @@ a:has(.iconize-icon-in-link[data-icon=⚫]) .iconize-icon-in-link[data-icon=⚫]
 }
 
 a:has(.iconize-icon-in-link[data-icon=⚫]),
-strong:has(a[data-footref=⚫]),
+strong:has(a[data-footref*=⚫]),
+em:has(a[data-footref*=⚫]),
 .cm-line:has(.iconize-icon-in-link[title=⚫]) .iconize-icon-in-link[title=⚫] + img + span > a {
   font-weight: 600;
   font-size: calc(var(--font-text-size) - 1px);
@@ -320,9 +333,10 @@ strong:has(a[data-footref=⚫]),
   text-decoration: none;
   color: var(--color-base-50);
 }
-a:has(.iconize-icon-in-link[data-icon=⚫]) a[data-footref=⚫],
-strong:has(a[data-footref=⚫]) a[data-footref=⚫],
-.cm-line:has(.iconize-icon-in-link[title=⚫]) .iconize-icon-in-link[title=⚫] + img + span > a a[data-footref=⚫] {
+a:has(.iconize-icon-in-link[data-icon=⚫]) a[data-footref*=⚫],
+strong:has(a[data-footref*=⚫]) a[data-footref*=⚫],
+em:has(a[data-footref*=⚫]) a[data-footref*=⚫],
+.cm-line:has(.iconize-icon-in-link[title=⚫]) .iconize-icon-in-link[title=⚫] + img + span > a a[data-footref*=⚫] {
   display: none;
 }
 
@@ -332,7 +346,8 @@ a:has(.iconize-icon-in-link[data-icon=🔴]) .iconize-icon-in-link[data-icon=�
 }
 
 a:has(.iconize-icon-in-link[data-icon=🔴]),
-strong:has(a[data-footref=🔴]),
+strong:has(a[data-footref*=🔴]),
+em:has(a[data-footref*=🔴]),
 .cm-line:has(.iconize-icon-in-link[title=🔴]) .iconize-icon-in-link[title=🔴] + img + span > a {
   font-weight: 600;
   font-size: calc(var(--font-text-size) - 1px);
@@ -340,9 +355,10 @@ strong:has(a[data-footref=🔴]),
   text-decoration: none;
   color: var(--color-red);
 }
-a:has(.iconize-icon-in-link[data-icon=🔴]) a[data-footref=🔴],
-strong:has(a[data-footref=🔴]) a[data-footref=🔴],
-.cm-line:has(.iconize-icon-in-link[title=🔴]) .iconize-icon-in-link[title=🔴] + img + span > a a[data-footref=🔴] {
+a:has(.iconize-icon-in-link[data-icon=🔴]) a[data-footref*=🔴],
+strong:has(a[data-footref*=🔴]) a[data-footref*=🔴],
+em:has(a[data-footref*=🔴]) a[data-footref*=🔴],
+.cm-line:has(.iconize-icon-in-link[title=🔴]) .iconize-icon-in-link[title=🔴] + img + span > a a[data-footref*=🔴] {
   display: none;
 }
 
@@ -352,7 +368,8 @@ a:has(.iconize-icon-in-link[data-icon=🆑]) .iconize-icon-in-link[data-icon=�
 }
 
 a:has(.iconize-icon-in-link[data-icon=🆑]),
-strong:has(a[data-footref=🆑]),
+strong:has(a[data-footref*=🆑]),
+em:has(a[data-footref*=🆑]),
 .cm-line:has(.iconize-icon-in-link[title=🆑]) .iconize-icon-in-link[title=🆑] + img + span > a {
   font-weight: 600;
   font-size: calc(var(--font-text-size) - 1px);
@@ -360,9 +377,10 @@ strong:has(a[data-footref=🆑]),
   text-decoration: none;
   color: var(--color-cyan);
 }
-a:has(.iconize-icon-in-link[data-icon=🆑]) a[data-footref=🆑],
-strong:has(a[data-footref=🆑]) a[data-footref=🆑],
-.cm-line:has(.iconize-icon-in-link[title=🆑]) .iconize-icon-in-link[title=🆑] + img + span > a a[data-footref=🆑] {
+a:has(.iconize-icon-in-link[data-icon=🆑]) a[data-footref*=🆑],
+strong:has(a[data-footref*=🆑]) a[data-footref*=🆑],
+em:has(a[data-footref*=🆑]) a[data-footref*=🆑],
+.cm-line:has(.iconize-icon-in-link[title=🆑]) .iconize-icon-in-link[title=🆑] + img + span > a a[data-footref*=🆑] {
   display: none;
 }
 
@@ -372,6 +390,8 @@ a:has(.iconize-icon-in-link[data-icon=🟩]) .iconize-icon-in-link[data-icon=�
 }
 
 a:has(.iconize-icon-in-link[data-icon=🟩]),
+strong:has(a[data-footref*=🟩]),
+em:has(a[data-footref*=🟩]),
 .cm-line:has(.iconize-icon-in-link[title=🟩]) .iconize-icon-in-link[title=🟩] + img + span > a {
   font-weight: normal;
   font-size: calc(var(--font-text-size) - 1px);
@@ -381,12 +401,18 @@ a:has(.iconize-icon-in-link[data-icon=🟩]),
   text-decoration-color: var(--color-green);
 }
 
+a[data-footref*=🟩] {
+  display: none;
+}
+
 a:has(.iconize-icon-in-link[data-icon=🟧]) .iconize-icon-in-link[data-icon=🟧],
 .cm-line:has(.iconize-icon-in-link[title=🟧]) .iconize-icon-in-link[title=🟧] {
   display: none;
 }
 
 a:has(.iconize-icon-in-link[data-icon=🟧]),
+strong:has(a[data-footref*=🟧]),
+em:has(a[data-footref*=🟧]),
 .cm-line:has(.iconize-icon-in-link[title=🟧]) .iconize-icon-in-link[title=🟧] + img + span > a {
   font-weight: normal;
   font-size: calc(var(--font-text-size) - 1px);
@@ -396,12 +422,18 @@ a:has(.iconize-icon-in-link[data-icon=🟧]),
   text-decoration-color: var(--color-orange);
 }
 
+a[data-footref*=🟧] {
+  display: none;
+}
+
 a:has(.iconize-icon-in-link[data-icon=🟦]) .iconize-icon-in-link[data-icon=🟦],
 .cm-line:has(.iconize-icon-in-link[title=🟦]) .iconize-icon-in-link[title=🟦] {
   display: none;
 }
 
 a:has(.iconize-icon-in-link[data-icon=🟦]),
+strong:has(a[data-footref*=🟦]),
+em:has(a[data-footref*=🟦]),
 .cm-line:has(.iconize-icon-in-link[title=🟦]) .iconize-icon-in-link[title=🟦] + img + span > a {
   font-weight: normal;
   font-size: calc(var(--font-text-size) - 1px);
@@ -411,12 +443,18 @@ a:has(.iconize-icon-in-link[data-icon=🟦]),
   text-decoration-color: var(--color-blue);
 }
 
+a[data-footref*=🟦] {
+  display: none;
+}
+
 a:has(.iconize-icon-in-link[data-icon=🟨]) .iconize-icon-in-link[data-icon=🟨],
 .cm-line:has(.iconize-icon-in-link[title=🟨]) .iconize-icon-in-link[title=🟨] {
   display: none;
 }
 
 a:has(.iconize-icon-in-link[data-icon=🟨]),
+strong:has(a[data-footref*=🟨]),
+em:has(a[data-footref*=🟨]),
 .cm-line:has(.iconize-icon-in-link[title=🟨]) .iconize-icon-in-link[title=🟨] + img + span > a {
   font-weight: normal;
   font-size: calc(var(--font-text-size) - 1px);
@@ -426,12 +464,18 @@ a:has(.iconize-icon-in-link[data-icon=🟨]),
   text-decoration-color: var(--color-yellow);
 }
 
+a[data-footref*=🟨] {
+  display: none;
+}
+
 a:has(.iconize-icon-in-link[data-icon=🟪]) .iconize-icon-in-link[data-icon=🟪],
 .cm-line:has(.iconize-icon-in-link[title=🟪]) .iconize-icon-in-link[title=🟪] {
   display: none;
 }
 
 a:has(.iconize-icon-in-link[data-icon=🟪]),
+strong:has(a[data-footref*=🟪]),
+em:has(a[data-footref*=🟪]),
 .cm-line:has(.iconize-icon-in-link[title=🟪]) .iconize-icon-in-link[title=🟪] + img + span > a {
   font-weight: normal;
   font-size: calc(var(--font-text-size) - 1px);
@@ -441,12 +485,18 @@ a:has(.iconize-icon-in-link[data-icon=🟪]),
   text-decoration-color: var(--color-purple);
 }
 
+a[data-footref*=🟪] {
+  display: none;
+}
+
 a:has(.iconize-icon-in-link[data-icon=🟫]) .iconize-icon-in-link[data-icon=🟫],
 .cm-line:has(.iconize-icon-in-link[title=🟫]) .iconize-icon-in-link[title=🟫] {
   display: none;
 }
 
 a:has(.iconize-icon-in-link[data-icon=🟫]),
+strong:has(a[data-footref*=🟫]),
+em:has(a[data-footref*=🟫]),
 .cm-line:has(.iconize-icon-in-link[title=🟫]) .iconize-icon-in-link[title=🟫] + img + span > a {
   font-weight: normal;
   font-size: calc(var(--font-text-size) - 1px);
@@ -456,12 +506,18 @@ a:has(.iconize-icon-in-link[data-icon=🟫]),
   text-decoration-color: var(--color-base-60);
 }
 
+a[data-footref*=🟫] {
+  display: none;
+}
+
 a:has(.iconize-icon-in-link[data-icon=🟥]) .iconize-icon-in-link[data-icon=🟥],
 .cm-line:has(.iconize-icon-in-link[title=🟥]) .iconize-icon-in-link[title=🟥] {
   display: none;
 }
 
 a:has(.iconize-icon-in-link[data-icon=🟥]),
+strong:has(a[data-footref*=🟥]),
+em:has(a[data-footref*=🟥]),
 .cm-line:has(.iconize-icon-in-link[title=🟥]) .iconize-icon-in-link[title=🟥] + img + span > a {
   font-weight: normal;
   font-size: calc(var(--font-text-size) - 1px);
@@ -471,12 +527,18 @@ a:has(.iconize-icon-in-link[data-icon=🟥]),
   text-decoration-color: var(--color-red);
 }
 
+a[data-footref*=🟥] {
+  display: none;
+}
+
 a:has(.iconize-icon-in-link[data-icon=🆔]) .iconize-icon-in-link[data-icon=🆔],
 .cm-line:has(.iconize-icon-in-link[title=🆔]) .iconize-icon-in-link[title=🆔] {
   display: none;
 }
 
 a:has(.iconize-icon-in-link[data-icon=🆔]),
+strong:has(a[data-footref*=🆔]),
+em:has(a[data-footref*=🆔]),
 .cm-line:has(.iconize-icon-in-link[title=🆔]) .iconize-icon-in-link[title=🆔] + img + span > a {
   font-weight: normal;
   font-size: calc(var(--font-text-size) - 1px);
@@ -484,6 +546,10 @@ a:has(.iconize-icon-in-link[data-icon=🆔]),
   text-decoration-style: double;
   color: var(--color-base-70);
   text-decoration-color: var(--color-cyan);
+}
+
+a[data-footref*=🆔] {
+  display: none;
 }
 
 /* Solve strange bug with duplicate icon on links inside Dataview metadata */

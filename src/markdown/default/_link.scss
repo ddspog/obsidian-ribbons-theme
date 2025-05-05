@@ -5,7 +5,8 @@
 	}
 
     a:has(.iconize-icon-in-link[data-icon=#{$icon}]),
-	strong:has(a[data-footref=#{$icon}]),
+	strong:has(a[data-footref*=#{$icon}]),
+	em:has(a[data-footref*=#{$icon}]),
 	.cm-line:has(.iconize-icon-in-link[title=#{$icon}]) .iconize-icon-in-link[title=#{$icon}] + img + span > a {
         font-weight: 600;
 		font-size: calc(var(--font-text-size) - 1px);
@@ -32,7 +33,7 @@
 			color: var(--color-cyan);
 		}
 
-		a[data-footref=#{$icon}] {
+		a[data-footref*=#{$icon}] {
 			display: none;
 		}
     }
@@ -55,6 +56,8 @@
 	}
 
     a:has(.iconize-icon-in-link[data-icon=#{$icon}]),
+	strong:has(a[data-footref*=#{$icon}]),
+	em:has(a[data-footref*=#{$icon}]),
 	.cm-line:has(.iconize-icon-in-link[title=#{$icon}]) .iconize-icon-in-link[title=#{$icon}] + img + span > a {
         font-weight: normal;
 		font-size: calc(var(--font-text-size) - 1px);
@@ -80,6 +83,10 @@
 			text-decoration-color: var(--color-cyan);
 		}
     }
+
+	a[data-footref*=#{$icon}] {
+		display: none;
+	}
 }
 
 @include paint-square-links("🟩");
