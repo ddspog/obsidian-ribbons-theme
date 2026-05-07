@@ -1,0 +1,10 @@
+// Applies title styles to `.inline-title` and, when Obsidian's inline title
+// is disabled (body lacks `.show-inline-title`), to the first h1 in reading
+// view and the first HyperMD header-1 line in live preview.
+@mixin apply($note) {
+	.#{$note} .inline-title,
+	body:not(.show-inline-title) .#{$note} .markdown-rendered.markdown-preview-view h1:first-of-type,
+	body:not(.show-inline-title) .#{$note} .markdown-source-view .HyperMD-header-1:not(.HyperMD-header-1 ~ .HyperMD-header-1) {
+		@content;
+	}
+}
