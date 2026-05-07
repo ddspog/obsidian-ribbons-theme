@@ -53,8 +53,7 @@ body {
 .markdown-source-view .HyperMD-header.HyperMD-header-1,
 .markdown-rendered.markdown-preview-view h1 {
   text-align: left;
-  -webkit-text-decoration: solid underline var(--text-title) var(--size-2-1);
-          text-decoration: solid underline var(--text-title) var(--size-2-1);
+  text-decoration: solid underline var(--text-title) var(--size-2-1);
   text-underline-offset: var(--size-4-2);
 }
 
@@ -572,17 +571,29 @@ p:has(> .math-inline) {
   margin-block-end: 0px;
 }
 
+body:not(.show-inline-title) .markdown-preview-view.markdown-rendered.note-feature h1:first-of-type,
+body:not(.show-inline-title) .markdown-source-view.note-feature .HyperMD-header-1:not(.HyperMD-header-1 ~ .HyperMD-header-1) {
+  text-decoration: none;
+  font-variant: normal;
+}
+
 .note-feature .inline-title,
-body:not(.show-inline-title) .note-feature .markdown-rendered.markdown-preview-view h1:first-of-type,
-body:not(.show-inline-title) .note-feature .markdown-source-view .HyperMD-header-1:not(.HyperMD-header-1 ~ .HyperMD-header-1) {
+body:not(.show-inline-title) .markdown-preview-view.markdown-rendered.note-feature h1:first-of-type,
+body:not(.show-inline-title) .markdown-source-view.note-feature .HyperMD-header-1:not(.HyperMD-header-1 ~ .HyperMD-header-1) {
   text-transform: uppercase;
   font-stretch: condensed;
   font-size: 1.6em;
 }
 
+body:not(.show-inline-title) .markdown-preview-view.markdown-rendered.note-item h1:first-of-type,
+body:not(.show-inline-title) .markdown-source-view.note-item .HyperMD-header-1:not(.HyperMD-header-1 ~ .HyperMD-header-1) {
+  text-decoration: none;
+  font-variant: normal;
+}
+
 .note-item .inline-title,
-body:not(.show-inline-title) .note-item .markdown-rendered.markdown-preview-view h1:first-of-type,
-body:not(.show-inline-title) .note-item .markdown-source-view .HyperMD-header-1:not(.HyperMD-header-1 ~ .HyperMD-header-1) {
+body:not(.show-inline-title) .markdown-preview-view.markdown-rendered.note-item h1:first-of-type,
+body:not(.show-inline-title) .markdown-source-view.note-item .HyperMD-header-1:not(.HyperMD-header-1 ~ .HyperMD-header-1) {
   background-image: linear-gradient(to right, var(--background-secondary), var(--background-primary));
   border-top: solid var(--text-title) 1px;
   border-bottom: solid var(--text-title) 1px;
@@ -593,9 +604,15 @@ body:not(.show-inline-title) .note-item .markdown-source-view .HyperMD-header-1:
   font-size: 1.6em;
 }
 
+body:not(.show-inline-title) .markdown-preview-view.markdown-rendered.note-spell h1:first-of-type,
+body:not(.show-inline-title) .markdown-source-view.note-spell .HyperMD-header-1:not(.HyperMD-header-1 ~ .HyperMD-header-1) {
+  text-decoration: none;
+  font-variant: normal;
+}
+
 .note-spell .inline-title,
-body:not(.show-inline-title) .note-spell .markdown-rendered.markdown-preview-view h1:first-of-type,
-body:not(.show-inline-title) .note-spell .markdown-source-view .HyperMD-header-1:not(.HyperMD-header-1 ~ .HyperMD-header-1) {
+body:not(.show-inline-title) .markdown-preview-view.markdown-rendered.note-spell h1:first-of-type,
+body:not(.show-inline-title) .markdown-source-view.note-spell .HyperMD-header-1:not(.HyperMD-header-1 ~ .HyperMD-header-1) {
   text-transform: uppercase;
   background-color: var(--text-title);
   color: var(--background-primary);
@@ -747,9 +764,15 @@ body:not(.show-inline-title) .note-spell .markdown-source-view .HyperMD-header-1
   text-align: left;
 }
 
+body:not(.show-inline-title) .markdown-preview-view.markdown-rendered.note-player-character h1:first-of-type,
+body:not(.show-inline-title) .markdown-source-view.note-player-character .HyperMD-header-1:not(.HyperMD-header-1 ~ .HyperMD-header-1) {
+  text-decoration: none;
+  font-variant: normal;
+}
+
 .note-player-character .inline-title,
-body:not(.show-inline-title) .note-player-character .markdown-rendered.markdown-preview-view h1:first-of-type,
-body:not(.show-inline-title) .note-player-character .markdown-source-view .HyperMD-header-1:not(.HyperMD-header-1 ~ .HyperMD-header-1) {
+body:not(.show-inline-title) .markdown-preview-view.markdown-rendered.note-player-character h1:first-of-type,
+body:not(.show-inline-title) .markdown-source-view.note-player-character .HyperMD-header-1:not(.HyperMD-header-1 ~ .HyperMD-header-1) {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -1109,14 +1132,12 @@ body {
   .callout[data-callout-metadata*=match-iy-] {
     position: absolute;
     height: calc(anchor-size(height) - var(--el-margin-top, 0px) - var(--el-margin-bottom, 0px));
-    min-height: -moz-fit-content;
     min-height: fit-content;
   }
 }
 .callout[data-callout-metadata*=match-y-] {
   position: absolute;
   height: calc(anchor-size(height) - var(--el-margin-top, 0px) - var(--el-margin-bottom, 0px));
-  min-height: -moz-fit-content;
   min-height: fit-content;
 }
 
@@ -2125,8 +2146,7 @@ tbody tr:has(a[href="#css/row/section-end"]) a[href="#css/row/section-end"] {
 img[alt*=banner]:not([width]),
 .image-embed[alt*=banner]:not([width]) img {
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   margin-bottom: 0px;
   --el-margin-bottom: 0px;
@@ -2150,8 +2170,7 @@ img[alt~="banner+tall"],
 
 :is(img, .internal-embed)[alt*=sban],
 :is(img, .internal-embed)[alt~=sban] {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
 }
 
@@ -2201,93 +2220,75 @@ img[alt~="banner+tall"],
 }
 
 .image-embed[alt*="p+"] img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .image-embed[alt*="p+c"] img {
-  -o-object-position: center;
-     object-position: center;
+  object-position: center;
 }
 
 .image-embed[alt*="p+t"] img {
-  -o-object-position: top;
-     object-position: top;
+  object-position: top;
 }
 
 .image-embed[alt*="p+b"] img {
-  -o-object-position: bottom;
-     object-position: bottom;
+  object-position: bottom;
 }
 
 .image-embed[alt*="p+l"] img {
-  -o-object-position: left;
-     object-position: left;
+  object-position: left;
 }
 
 .image-embed[alt*="p+r"] img {
-  -o-object-position: right;
-     object-position: right;
+  object-position: right;
 }
 
 .image-embed[alt*="p+cl"] img {
-  -o-object-position: 15%;
-     object-position: 15%;
+  object-position: 15%;
 }
 
 .image-embed[alt*="p+ccl"] img {
-  -o-object-position: 25%;
-     object-position: 25%;
+  object-position: 25%;
 }
 
 .image-embed[alt*="p+cr"] img {
-  -o-object-position: 60%;
-     object-position: 60%;
+  object-position: 60%;
 }
 
 .image-embed[alt*="p+ccr"] img {
-  -o-object-position: 75%;
-     object-position: 75%;
+  object-position: 75%;
 }
 
 .image-embed[alt*="p+tc"] img {
-  -o-object-position: 50% 10%;
-     object-position: 50% 10%;
+  object-position: 50% 10%;
 }
 
 .image-embed[alt*="p+tcc"] img {
-  -o-object-position: 50% 20%;
-     object-position: 50% 20%;
+  object-position: 50% 20%;
 }
 
 .image-embed[alt*="p+cct"] img {
-  -o-object-position: 50% 30%;
-     object-position: 50% 30%;
+  object-position: 50% 30%;
 }
 
 .image-embed[alt*="p+ct"] img {
-  -o-object-position: 50% 40%;
-     object-position: 50% 40%;
+  object-position: 50% 40%;
 }
 
 .image-embed[alt*="p+cb"] img {
-  -o-object-position: 50% 60%;
-     object-position: 50% 60%;
+  object-position: 50% 60%;
 }
 
 .image-embed[alt*="p+ccb"] img {
-  -o-object-position: 50% 70%;
-     object-position: 50% 70%;
+  object-position: 50% 70%;
 }
 
 .image-embed[alt*="p+bc"] img {
-  -o-object-position: 50% 80%;
-     object-position: 50% 80%;
+  object-position: 50% 80%;
 }
 
 .image-embed[alt*="p+bcc"] img {
-  -o-object-position: 50% 90%;
-     object-position: 50% 90%;
+  object-position: 50% 90%;
 }
 
 /*----Image Positions/Adjustments----*/
@@ -2331,8 +2332,7 @@ body {
 /*-Image Sizing-*/
 /*Fit image within bounds WITHOUT stretching*/
 img:is([alt*=cover], [alt*=cvr]) {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 img[alt][alt]:not([alt*=relative])[alt*=hmicro] {
@@ -2475,8 +2475,7 @@ div:not(.image-embed) > img[alt][alt*=relative] {
   display: block;
   margin: auto;
   max-height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .internal-embed[alt*=right] {
@@ -2872,4 +2871,6 @@ td:has(.exhaustion-bar) > p {
 }
 .mb-input-type-toggle.adv > .checkbox-container input[type=checkbox]:checked, .mb-input-type-toggle.adv > .checkbox-container input[type=checkbox]:after, .mb-input-type-toggle.adv > .checkbox-container input[type=checkbox]:hover {
   background: none;
-}/*# sourceMappingURL=publish.css.map */
+}
+
+/*# sourceMappingURL=publish.css.map */
