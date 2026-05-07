@@ -557,11 +557,11 @@ a[data-footref*=🆔] {
   display: none;
 }
 
-p:has(> .math-inline) {
-  text-align: center;
-}
 p:has(> .math-inline) strong {
   float: left;
+}
+p:has(> .math-inline) {
+  text-align: center;
 }
 
 .markdown-rendered :is(tbody > tr > td, thead tr > th) {
@@ -572,18 +572,17 @@ p:has(> .math-inline) strong {
   margin-block-end: 0px;
 }
 
-.note-feature {
-  --inline-title-size: 1.6em;
-}
-.note-feature .inline-title {
+.note-feature .inline-title,
+body:not(.show-inline-title) .note-feature .markdown-rendered.markdown-preview-view h1:first-of-type,
+body:not(.show-inline-title) .note-feature .markdown-source-view .HyperMD-header-1:not(.HyperMD-header-1 ~ .HyperMD-header-1) {
   text-transform: uppercase;
   font-stretch: condensed;
+  font-size: 1.6em;
 }
 
-.note-item {
-  --inline-title-size: 1.6em;
-}
-.note-item .inline-title {
+.note-item .inline-title,
+body:not(.show-inline-title) .note-item .markdown-rendered.markdown-preview-view h1:first-of-type,
+body:not(.show-inline-title) .note-item .markdown-source-view .HyperMD-header-1:not(.HyperMD-header-1 ~ .HyperMD-header-1) {
   background-image: linear-gradient(to right, var(--background-secondary), var(--background-primary));
   border-top: solid var(--text-title) 1px;
   border-bottom: solid var(--text-title) 1px;
@@ -591,19 +590,20 @@ p:has(> .math-inline) strong {
   padding-left: var(--size-4-2);
   padding-bottom: var(--size-2-1);
   font-stretch: condensed;
+  font-size: 1.6em;
 }
 
-.note-spell {
-  --inline-title-size: 1.6em;
-  --inline-title-font: "My Table font", "SF Compact Rounded";
-  --inline-title-weight: normal;
-}
-.note-spell .inline-title {
+.note-spell .inline-title,
+body:not(.show-inline-title) .note-spell .markdown-rendered.markdown-preview-view h1:first-of-type,
+body:not(.show-inline-title) .note-spell .markdown-source-view .HyperMD-header-1:not(.HyperMD-header-1 ~ .HyperMD-header-1) {
   text-transform: uppercase;
   background-color: var(--text-title);
   color: var(--background-primary);
   padding-left: var(--size-4-2);
   padding-bottom: var(--size-2-1);
+  font-size: 1.6em;
+  font-family: "My Table font", "SF Compact Rounded";
+  font-weight: normal;
 }
 
 .embed-note-spell .internal-embed .markdown-embed-title {
@@ -747,7 +747,9 @@ p:has(> .math-inline) strong {
   text-align: left;
 }
 
-.note-player-character .inline-title {
+.note-player-character .inline-title,
+body:not(.show-inline-title) .note-player-character .markdown-rendered.markdown-preview-view h1:first-of-type,
+body:not(.show-inline-title) .note-player-character .markdown-source-view .HyperMD-header-1:not(.HyperMD-header-1 ~ .HyperMD-header-1) {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -1345,13 +1347,15 @@ p:has(.callout[data-callout="l/block"]) {
 }
 .callout[data-callout="i/field"] .callout-title {
   display: inline;
+}
+.callout[data-callout="i/field"] .callout-title .callout-icon {
+  display: none;
+}
+.callout[data-callout="i/field"] .callout-title {
   position: relative;
   top: calc(1.9em * var(--line-height-normal));
   text-transform: uppercase;
   font-size: var(--font-smallest);
-}
-.callout[data-callout="i/field"] .callout-title .callout-icon {
-  display: none;
 }
 .callout[data-callout="i/field"] .callout-content {
   position: relative;
@@ -2171,10 +2175,6 @@ img[alt~="banner+tall"],
   margin-right: auto;
 }
 
-.markdown-rendered, .is-live-preview {
-  /* When multiple float elements form a paragraph, make it a line block and
-     do not supass other elements */
-}
 .markdown-rendered img:is([alt*=left], [alt*=locl]), .markdown-rendered .image-embed:is([alt*=left], [alt*=locl]), .is-live-preview img:is([alt*=left], [alt*=locl]), .is-live-preview .image-embed:is([alt*=left], [alt*=locl]) {
   float: left;
   margin-right: 2%;
@@ -2188,6 +2188,10 @@ img[alt~="banner+tall"],
   margin-left: 2%;
   margin-bottom: 0px;
   --el-margin-bottom: 0px;
+}
+.markdown-rendered, .is-live-preview {
+  /* When multiple float elements form a paragraph, make it a line block and
+     do not supass other elements */
 }
 .markdown-rendered :is(p, .cm-line):has(> .image-embed:is([alt*=left], [alt*=locl], [alt*=right], [alt*=locr])):has(.image-embed:is([alt*=left], [alt*=locl], [alt*=right], [alt*=locr]) ~ .image-embed:is([alt*=left], [alt*=locl], [alt*=right], [alt*=locr])), .is-live-preview :is(p, .cm-line):has(> .image-embed:is([alt*=left], [alt*=locl], [alt*=right], [alt*=locr])):has(.image-embed:is([alt*=left], [alt*=locl], [alt*=right], [alt*=locr]) ~ .image-embed:is([alt*=left], [alt*=locl], [alt*=right], [alt*=locr])) {
   overflow: hidden;
@@ -2672,9 +2676,6 @@ p:has(> .internal-embed) {
   height: 36px !important;
 }
 
-[class*=proficiency-] {
-  background-color: var(--text-faint);
-}
 [class*=proficiency-][class*=-dot] {
   display: inline-block;
   width: calc(var(--size-4-2) + var(--size-2-1));
@@ -2701,6 +2702,9 @@ p:has(> .internal-embed) {
   position: absolute;
   top: anchor(top, 6%);
   left: anchor(left, 18%);
+}
+[class*=proficiency-] {
+  background-color: var(--text-faint);
 }
 [class*=proficiency-].has-advantage::after {
   content: "A";

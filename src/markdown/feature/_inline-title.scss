@@ -1,8 +1,7 @@
-.note-feature {
-	--inline-title-size: 1.6em;
+@use '../title-fallback' as t;
 
-	.inline-title {
-		text-transform: uppercase;
-		font-stretch: condensed;
-	}
+@include t.apply('note-feature') {
+	text-transform: uppercase;
+	font-stretch: condensed;
+	font-size: 1.6em;
 }
