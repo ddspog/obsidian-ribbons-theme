@@ -134,10 +134,10 @@ body .HyperMD-quote:has(> span.cm-highlight) .cm-highlight {
 }
 body .markdown-preview-view blockquote mark {
   /* Position element */
-  position: relative;
-  left: 90%;
+  display: block;
+  text-align: end;
   /* Alter its font style */
-  background-color: var(--background-primary);
+  background-color: transparent;
   color: var(--h3-color);
   font-weight: bold;
 }
