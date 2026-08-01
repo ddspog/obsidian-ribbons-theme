@@ -1,6 +1,6 @@
 .callout[data-callout]:has(.callout[data-callout]) {
 	.callout[data-callout="l/section"] {
-		--callout-color: 0,0,0;
+		--callout-color: rgb(0,0,0);
 		background: none;
 		margin-top: var(--p-spacing);
 		--el-margin-top: var(--p-spacing);
