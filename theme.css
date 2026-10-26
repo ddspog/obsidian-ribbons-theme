@@ -571,6 +571,27 @@ p:has(> .math-inline) {
   margin-block-end: 0px;
 }
 
+body.is-mobile {
+  --h1-size: 1.6em;
+  --h2-size: 1.35em;
+  --h3-size: 1.2em;
+  --h4-size: 1.08em;
+  --h5-size: 1em;
+  --h6-size: 0.95em;
+}
+
+body.is-mobile .markdown-rendered.markdown-preview-view h2 {
+  text-indent: var(--size-4-2);
+}
+
+body.is-mobile .markdown-rendered.markdown-preview-view h4 {
+  text-indent: var(--size-4-3);
+}
+
+body.is-mobile .markdown-rendered.markdown-preview-view h6 {
+  text-indent: var(--size-4-4);
+}
+
 body:not(.show-inline-title) .markdown-preview-view.markdown-rendered.note-feature h1:first-of-type,
 body:not(.show-inline-title) .markdown-source-view.note-feature .HyperMD-header-1:not(.HyperMD-header-1 ~ .HyperMD-header-1) {
   text-decoration: none;
