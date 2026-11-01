@@ -1,3 +1,4 @@
+@use "sass:list";
 // ────Move up-----------------─────────────────────────────────────────────── /
 .image-embed:is([alt*="up-4l"]) img {
     position: relative;
@@ -71,3 +72,29 @@
 .image-embed[alt*="p+ccb"] img { object-position: 50% 70%; }
 .image-embed[alt*="p+bc"]  img { object-position: 50% 80%; }
 .image-embed[alt*="p+bcc"] img { object-position: 50% 90%; }
+
+// ────On a narrow column (a phone, a thin pane)────────────────────────────── /
+// A floated picture as wide as half the column leaves a strip of one-word lines beside it. On a
+// column under 500px a floated picture 200px or wider sits on its own line, centred; small ones
+// (under 200px: icons, glyphs) keep floating. The desktop look is unchanged.
+$small-widths: ();
+@for $w from 10 through 99 {
+	$small-widths: list.append($small-widths, '[width="#{$w}"]', comma);
+}
+@media (max-width: 500px) {
+	.markdown-rendered .image-embed:is([alt*="left"], [alt*="locl"], [alt*="right"], [alt*="locr"]):not([width^="1"], #{$small-widths}) {
+		float: none;
+		display: block;
+		margin: var(--size-4-3) auto;
+		--el-margin-bottom: var(--size-4-3);
+		text-align: center;
+
+		img {
+			float: none;
+			width: auto;
+			max-width: 100%;
+			max-height: 40vh;
+			margin: 0 auto;
+		}
+	}
+}

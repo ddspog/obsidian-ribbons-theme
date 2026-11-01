@@ -3,77 +3,90 @@ body {
 		.HyperMD-quote:has(> span.cm-highlight) {
 			/* Position element */
 			text-align: end;
-		
+
 			/* Alter its font style */
 			.cm-highlight {
 				background-color: var(--background-primary);
-				color: var(--h3-color);
-				font-weight: bold;
+				color: var(--h1-color);
+				font-variant: small-caps;
+				letter-spacing: 0.04em;
 			}
 		}
-		
+
+		/* The signature of a quote (==Name==): its own line, in plum small caps after a dash */
 		.markdown-preview-view blockquote mark {
-			/* Position element */
 			display: block;
 			text-align: end;
-
-			/* Alter its font style */
+			margin-top: var(--size-4-2);
 			background-color: transparent;
-			color: var(--h3-color);
-			font-weight: bold;
+			color: var(--h1-color);
+			font-style: normal;
+			font-weight: 600;
+			font-variant: small-caps;
+			letter-spacing: 0.04em;
+
+			&::before {
+				content: "\2014\00a0";
+			}
 		}
 	}
 
-	.markdown-preview-view blockquote {
-		font-style: italic;
-	}
-
-	.HyperMD-quote,
-	.markdown-preview-view blockquote {
-		/* Gradient on background*/
+	/* The editor keeps a light quote: readable text, the old tint */
+	.HyperMD-quote {
 		--blockquote-border-color: var(--text-faint);
 		background-image: linear-gradient(to right,
 				var(--background-secondary),
 				var(--background-primary));
-
-		/* Spacing to add ::before element */
-		width: 80%;
-		left: var(--size-4-6);
-
-		/* Content */
-		color: var(--text-faint);
+		color: var(--text-muted);
 		font-family: "My Quote font", "New York Small";
-		font-size: var(--font-smallest);
-		text-indent: var(--size-2-1) !important;
-		line-height: var(--line-height-normal);
+	}
 
-		/* Spacing to center content */
-		margin-bottom: var(--size-4-2);
-		--el-margin-bottom: var(--size-4-2);
-		padding-left: var(--size-4-5);
-		padding-top: var(--size-4-2);
-		padding-bottom: var(--size-4-2);
-		padding-right: var(--size-4-6);
+	/* A quote reads like a book's foreword: body text set between two thin plum rules, the opening
+	   mark hung inside its left padding. Long quotes stay readable; nothing is faint or small. */
+	.markdown-preview-view blockquote {
+		--blockquote-border-thickness: 0;
+		--quote-rule: color-mix(in srgb, var(--h1-color) 35%, transparent);
 		position: relative;
+		width: auto;
+		left: 0;
+		background: none;
+		border: 0;
+		border-top: 1px solid var(--quote-rule);
+		border-bottom: 1px solid var(--quote-rule);
+		color: var(--text-normal);
+		font-family: "My Quote font", "New York Small";
+		font-size: var(--font-text-size);
+		font-style: normal;
+		line-height: var(--line-height-normal);
+		text-indent: 0 !important;
+		margin: var(--size-4-4) 0;
+		--el-margin-bottom: var(--size-4-4);
+		padding: var(--size-4-4) 0 var(--size-4-3) var(--size-4-9);
 	}
 
-	.HyperMD-quote:after,
-	.markdown-preview-view blockquote:after {
-		/* Display character */
+	.markdown-preview-view blockquote::after {
 		content: "\275D";
-		font-size: calc(var(--font-small) * 2.5);
-		color: var(--text-faint);
-
-		/* Position beside block */
 		position: absolute;
-		height: calc(var(--font-small) * 2);
-		top: calc(0% - var(--size-2-2));
-		left: calc(0% - var(--size-4-8));
+		left: 0;
+		top: var(--size-4-3);
+		font-size: 2.6em;
+		line-height: 1;
+		color: var(--h1-color);
+		opacity: 0.55;
 	}
 
-	.HyperMD-quote+.HyperMD-quote:after,
-	.markdown-preview-view blockquote+.markdown-preview-view blockquote:after {
-		/* Direct siblings won't show nothing */
-		content: '';
+	/* Quotes that follow one another read as one: no rule or mark between them */
+	.markdown-preview-view blockquote + blockquote {
+		border-top: 0;
+		margin-top: calc(-1 * var(--size-4-4));
+		padding-top: 0;
+
+		&::after {
+			content: "";
+		}
 	}
+}
+
+body.is-mobile .markdown-preview-view blockquote {
+	padding-left: var(--size-4-8);
 }

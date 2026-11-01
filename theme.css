@@ -122,6 +122,15 @@ body {
   line-height: 1;
 }
 
+body {
+  /* The editor keeps a light quote: readable text, the old tint */
+  /* A quote reads like a book's foreword: body text set between two thin plum rules, the opening
+     mark hung inside its left padding. Long quotes stay readable; nothing is faint or small. */
+  /* Quotes that follow one another read as one: no rule or mark between them */
+}
+body {
+  /* The signature of a quote (==Name==): its own line, in plum small caps after a dash */
+}
 body .HyperMD-quote:has(> span.cm-highlight) {
   /* Position element */
   text-align: end;
@@ -129,60 +138,71 @@ body .HyperMD-quote:has(> span.cm-highlight) {
 }
 body .HyperMD-quote:has(> span.cm-highlight) .cm-highlight {
   background-color: var(--background-primary);
-  color: var(--h3-color);
-  font-weight: bold;
+  color: var(--h1-color);
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
 }
 body .markdown-preview-view blockquote mark {
-  /* Position element */
   display: block;
   text-align: end;
-  /* Alter its font style */
+  margin-top: var(--size-4-2);
   background-color: transparent;
-  color: var(--h3-color);
-  font-weight: bold;
+  color: var(--h1-color);
+  font-style: normal;
+  font-weight: 600;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
 }
-body .markdown-preview-view blockquote {
-  font-style: italic;
+body .markdown-preview-view blockquote mark::before {
+  content: "— ";
 }
-body .HyperMD-quote,
-body .markdown-preview-view blockquote {
-  /* Gradient on background*/
+body .HyperMD-quote {
   --blockquote-border-color: var(--text-faint);
   background-image: linear-gradient(to right, var(--background-secondary), var(--background-primary));
-  /* Spacing to add ::before element */
-  width: 80%;
-  left: var(--size-4-6);
-  /* Content */
-  color: var(--text-faint);
+  color: var(--text-muted);
   font-family: "My Quote font", "New York Small";
-  font-size: var(--font-smallest);
-  text-indent: var(--size-2-1) !important;
-  line-height: var(--line-height-normal);
-  /* Spacing to center content */
-  margin-bottom: var(--size-4-2);
-  --el-margin-bottom: var(--size-4-2);
-  padding-left: var(--size-4-5);
-  padding-top: var(--size-4-2);
-  padding-bottom: var(--size-4-2);
-  padding-right: var(--size-4-6);
+}
+body .markdown-preview-view blockquote {
+  --blockquote-border-thickness: 0;
+  --quote-rule: color-mix(in srgb, var(--h1-color) 35%, transparent);
   position: relative;
+  width: auto;
+  left: 0;
+  background: none;
+  border: 0;
+  border-top: 1px solid var(--quote-rule);
+  border-bottom: 1px solid var(--quote-rule);
+  color: var(--text-normal);
+  font-family: "My Quote font", "New York Small";
+  font-size: var(--font-text-size);
+  font-style: normal;
+  line-height: var(--line-height-normal);
+  text-indent: 0 !important;
+  margin: var(--size-4-4) 0;
+  --el-margin-bottom: var(--size-4-4);
+  padding: var(--size-4-4) 0 var(--size-4-3) var(--size-4-9);
 }
-body .HyperMD-quote:after,
-body .markdown-preview-view blockquote:after {
-  /* Display character */
+body .markdown-preview-view blockquote::after {
   content: "❝";
-  font-size: calc(var(--font-small) * 2.5);
-  color: var(--text-faint);
-  /* Position beside block */
   position: absolute;
-  height: calc(var(--font-small) * 2);
-  top: calc(0% - var(--size-2-2));
-  left: calc(0% - var(--size-4-8));
+  left: 0;
+  top: var(--size-4-3);
+  font-size: 2.6em;
+  line-height: 1;
+  color: var(--h1-color);
+  opacity: 0.55;
 }
-body .HyperMD-quote + .HyperMD-quote:after,
-body .markdown-preview-view blockquote + .markdown-preview-view blockquote:after {
-  /* Direct siblings won't show nothing */
+body .markdown-preview-view blockquote + blockquote {
+  border-top: 0;
+  margin-top: calc(-1 * var(--size-4-4));
+  padding-top: 0;
+}
+body .markdown-preview-view blockquote + blockquote::after {
   content: "";
+}
+
+body.is-mobile .markdown-preview-view blockquote {
+  padding-left: var(--size-4-8);
 }
 
 a:has(.iconize-icon-in-link[data-icon=🟢]) .iconize-icon-in-link[data-icon=🟢],
@@ -889,7 +909,7 @@ body:not(.show-inline-title) .markdown-source-view.note-player-character .HyperM
 .callout[data-callout=rules] .markdown-preview-view {
   --callout-icon: lucide-scroll;
   --callout-title-size: calc(var(--font-text-size) + var(--size-2-1));
-  background-color: #e0d6df;
+  background-color: color-mix(in srgb, var(--h1-color) 14%, var(--background-primary));
   font-family: "My Title font", "SF Compact Display";
   font-stretch: condensed;
 }
@@ -2312,6 +2332,22 @@ img[alt~="banner+tall"],
   object-position: 50% 90%;
 }
 
+@media (max-width: 500px) {
+  .markdown-rendered .image-embed:is([alt*=left], [alt*=locl], [alt*=right], [alt*=locr]):not([width^="1"], [width="10"], [width="11"], [width="12"], [width="13"], [width="14"], [width="15"], [width="16"], [width="17"], [width="18"], [width="19"], [width="20"], [width="21"], [width="22"], [width="23"], [width="24"], [width="25"], [width="26"], [width="27"], [width="28"], [width="29"], [width="30"], [width="31"], [width="32"], [width="33"], [width="34"], [width="35"], [width="36"], [width="37"], [width="38"], [width="39"], [width="40"], [width="41"], [width="42"], [width="43"], [width="44"], [width="45"], [width="46"], [width="47"], [width="48"], [width="49"], [width="50"], [width="51"], [width="52"], [width="53"], [width="54"], [width="55"], [width="56"], [width="57"], [width="58"], [width="59"], [width="60"], [width="61"], [width="62"], [width="63"], [width="64"], [width="65"], [width="66"], [width="67"], [width="68"], [width="69"], [width="70"], [width="71"], [width="72"], [width="73"], [width="74"], [width="75"], [width="76"], [width="77"], [width="78"], [width="79"], [width="80"], [width="81"], [width="82"], [width="83"], [width="84"], [width="85"], [width="86"], [width="87"], [width="88"], [width="89"], [width="90"], [width="91"], [width="92"], [width="93"], [width="94"], [width="95"], [width="96"], [width="97"], [width="98"], [width="99"]) {
+    float: none;
+    display: block;
+    margin: var(--size-4-3) auto;
+    --el-margin-bottom: var(--size-4-3);
+    text-align: center;
+  }
+  .markdown-rendered .image-embed:is([alt*=left], [alt*=locl], [alt*=right], [alt*=locr]):not([width^="1"], [width="10"], [width="11"], [width="12"], [width="13"], [width="14"], [width="15"], [width="16"], [width="17"], [width="18"], [width="19"], [width="20"], [width="21"], [width="22"], [width="23"], [width="24"], [width="25"], [width="26"], [width="27"], [width="28"], [width="29"], [width="30"], [width="31"], [width="32"], [width="33"], [width="34"], [width="35"], [width="36"], [width="37"], [width="38"], [width="39"], [width="40"], [width="41"], [width="42"], [width="43"], [width="44"], [width="45"], [width="46"], [width="47"], [width="48"], [width="49"], [width="50"], [width="51"], [width="52"], [width="53"], [width="54"], [width="55"], [width="56"], [width="57"], [width="58"], [width="59"], [width="60"], [width="61"], [width="62"], [width="63"], [width="64"], [width="65"], [width="66"], [width="67"], [width="68"], [width="69"], [width="70"], [width="71"], [width="72"], [width="73"], [width="74"], [width="75"], [width="76"], [width="77"], [width="78"], [width="79"], [width="80"], [width="81"], [width="82"], [width="83"], [width="84"], [width="85"], [width="86"], [width="87"], [width="88"], [width="89"], [width="90"], [width="91"], [width="92"], [width="93"], [width="94"], [width="95"], [width="96"], [width="97"], [width="98"], [width="99"]) img {
+    float: none;
+    width: auto;
+    max-width: 100%;
+    max-height: 40vh;
+    margin: 0 auto;
+  }
+}
 /*----Image Positions/Adjustments----*/
 body {
   --micro: 70px;
