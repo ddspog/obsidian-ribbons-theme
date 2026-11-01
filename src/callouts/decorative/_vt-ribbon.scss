@@ -9,7 +9,7 @@
 .callout[data-callout="rules"] .markdown-preview-view {
 	--callout-icon: lucide-scroll;
 	--callout-title-size: calc(var(--font-text-size) + var(--size-2-1));
-	background-color: #e0d6df;
+	background-color: color-mix(in srgb, var(--h1-color) 14%, var(--background-primary));
 	font-family: "My Title font", "SF Compact Display";
 	font-stretch: condensed;
 }
