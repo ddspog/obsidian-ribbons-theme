@@ -1,7 +1,7 @@
 @use '../../assets';
 
 .callout[data-callout="letter"] {
-	--callout-color: 0, 0, 0;
+	--callout-color: rgb(0, 0, 0);
 	--callout-icon: lucide-signature;
 
 	/* Letter Border */
