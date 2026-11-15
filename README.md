@@ -12,15 +12,8 @@ The `src/` folder contains all SCSS source files organized by function. Below is
 - **callouts/**  
   Styles for callout boxes, organized into subfolders:
   - `decorative/`: Decorative callouts such as ribbons and letters.
-  - `input/`: Styles for input fields in callouts.
-  - `layout/`: Layout structures for callouts (blocks, sections, tabs, etc).
-  - `options/`: Style options and variations for callouts.
-
-- **code/**  
-  Styles for code blocks, plugin integrations (e.g., dataview, leaflet), and extra features like the solo RPG toolkit.
-
-- **components/**  
-  Reusable visual components, such as exhaustion bars, counters, attribute displays, etc.
+  - `layout/`: Layout structures for callouts (blocks, entries).
+  - `options/`: Style options for callouts (hiding the title).
 
 - **editor/**  
   Styles specific to the Obsidian editor, including the file explorer and properties view.
@@ -31,7 +24,7 @@ The `src/` folder contains all SCSS source files organized by function. Below is
 - **markdown/**  
   Styles for markdown rendering, with subfolders for different content types:
   - `default/`: Headings, cells, links, quotes, etc.
-  - `feature/`, `item/`, `moc/`, `player-character/`, `spell/`, `statblock/`: Styles for specific note or resource types.
+  - `feature/`, `item/`, `spell/`, `statblock/`: Styles for specific note or resource types.
 
 - **settings/**  
   Styles for the theme's settings screens and options.
@@ -43,6 +36,8 @@ The `src/` folder contains all SCSS source files organized by function. Below is
   Styles for task lists and checklists.
 
 ---
+
+Character sheets, stat blocks, spell cards and the like are drawn by the [RPG UI plugin](https://github.com/ddspog/obsidian-rpg-ui), which carries its own styles; the theme no longer holds components for them, nor rules for Dataview, Meta Bind, Leaflet or Iconize.
 
 Each subfolder and SCSS file was created to modularize and facilitate the maintenance of the theme, allowing for customization and expansion as needed.
 
