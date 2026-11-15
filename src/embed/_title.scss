@@ -44,13 +44,6 @@
 	display: block;
 }
 
-// ────Hide Dataview------------────────────────────────────────────────────── /
-.internal-embed:is(
-    [alt~="no-dv"], [alt~="no-dataview"]
-) .block-language-dataviewjs {
-	display: none;
-}
-
 // ────Hide Recursion-----------────────────────────────────────────────────── /
 .internal-embed .internal-embed:is(
     [alt~="no-rec"], [alt~="no-recursion"]
